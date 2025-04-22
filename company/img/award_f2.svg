@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_2" data-name="레이어_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 437 724">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #edc3a6;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        filter: url(#drop-shadow-1);
+      }
+    </style>
+    <filter id="drop-shadow-1" x="0" y="0" width="437" height="724" filterUnits="userSpaceOnUse">
+      <feOffset dx="0" dy="0"/>
+      <feGaussianBlur result="blur" stdDeviation="8"/>
+      <feFlood flood-color="#d3aa79" flood-opacity=".2"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="_레이어_1-2" data-name="레이어_1">
+    <g>
+      <rect class="cls-2" x="24.52" y="24" width="388.15" height="676"/>
+      <g>
+        <g>
+          <polygon class="cls-1" points="8.1 7.35 161.25 7.35 161.25 6.65 7.4 6.65 7.4 246.5 8.1 246.5 8.1 7.35"/>
+          <path class="cls-1" d="M8.25,246.65h-1V6.5h154.15v1H8.25v239.15ZM7.55,246.35h.4V7.2h153.15v-.4H7.55v239.55Z"/>
+        </g>
+        <g>
+          <polygon class="cls-1" points="430.1 478 429.4 478 429.4 716.65 276.75 716.65 276.75 717.35 430.1 717.35 430.1 478"/>
+          <path class="cls-1" d="M430.25,717.5h-153.65v-1h152.65v-238.65h1v239.65ZM276.9,717.2h153.05v-239.05h-.4v238.65h-152.65v.4Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
