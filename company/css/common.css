@@ -607,10 +607,25 @@ justify-content: center;
 
     transform: rotateY(180deg);
     display: flex;
-    flex-direction: column;
+ 
     gap: 20px;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.sticky_con ul li>.back .linecon{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-top: 1px solid #7e5c20;
+    border-bottom: 1px solid #7e5c20;
+    
 }
 
 
@@ -640,7 +655,7 @@ background-image: url(../img/brand_3_b.png);
     height: 110px;
     background-size: cover;
     padding-top: 16px;
-  
+  box-sizing: border-box;
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: center;
@@ -671,15 +686,17 @@ background-image: url(../img/brand_3_b.png);
 }
 
 .sticky_con ul li h3 { 
+    font-family: 'Pretendard', sans-serif;
  padding-top: 18px;
-    font-size: 5.6rem;
+    font-size: 5.3rem;
     font-weight: 400;
     color: #EACAA7;
 }
 
 .sticky_con ul li p {
+    font-family: 'Pretendard', sans-serif;
     padding-top: 8px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 100;
     line-height: 1.4rem;
     color: #EACAA7;

@@ -245,93 +245,38 @@ $(window).on('scroll', function () {
     if (keys.includes(e.keyCode)) e.preventDefault();
   }
 
-  let played = false;
 
-  gsap.set(".show_spread", { scale: 0.3, opacity: 0 });
-  gsap.set(".mid_short_show", { scale: 0.3, opacity: 0, borderRadius: "50%" });
-  gsap.set(".mid_short_show .con", { opacity: 0 });
-  gsap.set(".ligt", { scale: 0.5, opacity: 0 });
-  gsap.set(".pofo_list", { top: "100vh", opacity: 0 });
-  
-  ScrollTrigger.create({
-    trigger: ".mid_short_show_trigger",
-    start: "top 60%", // 화면 30% 아래에서 시작
-    end: "+=2200",
-    scrub: false,
-    pin: true,
-    once: true,
-    onEnter: () => {
-      if (played) return;
-      played = true;
-      disableScroll();
-  
-      // 트리거 기준 화면 상단에 정확히 mid_short_show가 붙도록 계산
-      const triggerOffset = document
-        .querySelector(".mid_short_show_trigger")
-        .getBoundingClientRect().top + window.scrollY;
-  
-      gsap.set(".mid_short_show", {
-        top: triggerOffset + "px", // 트리거의 정확한 위치로 고정
-        position: "absolute", // fixed가 아닌 absolute로 해도 맞춰줄 수 있음
-        left: 0,
-        width: "100vw",
-        height: "100vh",
-        zIndex: 10
-      });
-  
-      let tl = gsap.timeline();
-  
-      // 1. show_spread 퍼짐
-      tl.to(".show_spread", {
-        scale: 20,
-        opacity: 1,
-        duration: 1,
-        ease: "power2.out"
-      })
-  
-      // 2. mid_short_show 등장
+
+/* 카드 안에 이메일 주소 타이핑 */
+
+gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+
+// 타임라인 분리 방식
+ScrollTrigger.create({
+  trigger: ".mid_short_show",
+  start: "top top",
+  end: "+=2200",
+  pin: true,
+  scrub: false,
+  anticipatePin: 1,
+  toggleActions: "restart none none none",
+  onEnter: () => {
+    disableScroll();
+
+    gsap.set(".ligt", { scale: 0.5, opacity: 0 });
+    const anim = gsap.timeline();
+    anim
       .to(".mid_short_show", {
         opacity: 1,
-        scale: 0.3,
-        borderRadius: "50%",
-        duration: 0.1,
-        ease: "none"
-      })
-  
-      // 3. mid_short_show 커지기
-      .to(".mid_short_show", {
-        width: "70vw",
-        height: "70vh",
-        scale: 1,
-        opacity: 1,
-        borderRadius: "50%",
-        duration: 1,
-        ease: "power2.out"
-      })
-  
-      // 4. 네모로 확장
-      .to(".mid_short_show", {
-        width: "100vw",
-        height: "100vh",
-        borderRadius: "0%",
         duration: 0.5,
-        ease: "power2.out"
+        ease: "power1.out",
+        delay: 0.3
       })
-  
-      // 5. 내부 콘텐츠
-      .to(".mid_short_show .con", {
-        opacity: 1,
-        duration: 1,
-        ease: "power2.out"
-      })
-  
-      // 6. ligt 애니메이션
       .to(".ligt", {
         scale: 1,
         opacity: 1,
-        rotation: 360 * 3,
-        duration: 1.2,
-        ease: "power2.inOut"
+        duration: 0.5,
+        ease: "power2.out"
       })
       .to(".ligt", {
         duration: 3,
@@ -340,39 +285,47 @@ $(window).on('scroll', function () {
           path: "#thePath",
           align: "#thePath",
           alignOrigin: [0.5, 0.5],
-          autoRotate: false,
           start: 0.5,
-          end: 1.5
+          end: 1.5,
+          autoRotate: false
         }
       })
       .to(".ligt", {
         y: "+=312",
         scale: 12,
-        rotation: "+=" + 360 * 3,
+        rotation: 360,
         duration: 1,
         ease: "power2.out"
       })
-  
-      // 7. 화면 전환
       .to(".mid_short_show", {
         opacity: 0,
         duration: 0.7,
         ease: "power2.inOut"
       })
-  
-      .fromTo(".pofo_list", {
-        top: "100vh",
-        opacity: 0
+      .fromTo("section.pofo_list", {
+        top: '100vh',
+        opacity: 0,
       }, {
         top: 0,
-        opacity: 1,
         duration: 1,
+        opacity: 1,
         ease: "power2.inOut"
       })
-  
       .call(enableScroll);
-    }
-  });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
 /* 카드 안에 이메일 주소 타이핑 */
 
 
