@@ -225,11 +225,7 @@ $(window).on('scroll', function () {
     window.addEventListener('touchmove', preventScroll, { passive: false });
     window.addEventListener('keydown', preventKeyScroll, { passive: false });
   
-    // 스크롤 위치 강제 이동
-    const stikyTop = document.querySelector('.stiky_all')?.offsetTop;
-    if (stikyTop !== undefined) {
-      window.scrollTo({ top: stikyTop, behavior: 'instant' });
-    }
+ 
   }
   
   function enableScroll() {
@@ -247,7 +243,7 @@ $(window).on('scroll', function () {
 
 
 
-/* 카드 안에 이메일 주소 타이핑 */
+/* 보라영역 */
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
@@ -259,7 +255,7 @@ ScrollTrigger.create({
   pin: true,
   scrub: false,
   anticipatePin: 1,
-  toggleActions: "restart none none none",
+  toggleActions: "play none none none",
   onEnter: () => {
     disableScroll();
 
