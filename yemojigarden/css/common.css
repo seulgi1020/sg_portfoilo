@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+
+* {
+    box-sizing: border-box;
+}
+
+:root {}
+
+.inner {
+
+    width: 1500px;
+    margin: 0 auto;
+}
+
+
+
+/* 헤더 */
+header {
+    width: 100%;
+    height: 180px;
+    position: fixed;
+    /* 화면 상단에 고정 */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.00) 6.5%, rgba(198, 198, 198, 0.33) 23.5%, rgba(133, 133, 133, 0.67) 40.5%, #222 100%);
+    background-blend-mode: multiply;
+    /* 메인 비주얼보다 위에 */
+}
+
+/* 내부 정렬 */
+header .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header .inner h1 {
+    width: 120px;
+    height: 97px;
+}
+
+header .inner nav {
+
+
+}
+
+header .inner nav ul.gnb {
+    width: 842px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .inner nav ul.gnb>li {
+    position: relative;
+ 
+}
+
+
+header .inner nav ul.gnb>li>a {
+    line-height: 24px;
+    font-size: 24px;
+    font-family: 'KOROAD';
+    font-weight: 300;
+    color: #fff;
+}
+
+header .inner nav ul.gnb>li>ul {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    min-width: 200px; 
+
+    transition: opacity 0.3s ease-in-out;
+    font-size: 22px;
+    display: none;
+}
+
+
+header .inner nav ul.gnb>li>ul>li {
+
+    margin-bottom: 10px;
+}
+
+
+header .inner nav ul.gnb>li>ul>li>a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    font-family: 'KOROAD';
+    font-weight: 300;
+    white-space: nowrap;
+    position: relative;
+  color: #fff;
+    padding-inline: 10px;
+
+
+}
+
+header .inner nav ul.gnb>li>ul>li:hover>a {
+    background-color: #6a9602;
+    border-radius: 18px;
+       margin-right: 15px;
+}
+
+.h_r {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding: 2px;
+    width: 200px;
+}
+
+.search input {
+    border: none;
+
+    outline: none;
+ 
+    padding: 5px 10px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: transparent;
+
+    color: #e2e2e2;
+
+}
+.search input::placeholder{
+    color: #fff;
+}
+.search button {
+    background-color: transparent;
+ 
+    border: none;
+ 
+    cursor: pointer;
+}
+
+
+.search button i {
+    color: white;
+   
+    font-size: 20px;
+    
+}
+
+
+
+
+.language-selector {
+    position: relative;
+    margin-left: 15px;
+
+}
+
+.language-selector button {
+    gap: 3px;
+}
+
+.language-selector .fa-caret-down {
+    padding-left: 3px;
+}
+
+
+
+.lang-btn {
+    background: transparent ;
+
+    border: none ;
+
+
+    outline: none;
+
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.lang-btn i {
+    color: white;
+  
+    background: transparent;
+   /
+}
+
+.lang-btn p {
+    color: #fff;
+    padding: 5px;
+}
+
+.lang-dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  
+    position: absolute;
+    top: 100%;
+ 
+    left: 50%;
+  
+    transform: translateX(-50%);
+   
+    width: 110px;
+    background-color: rgba(255, 112, 46, 0.8);
+  
+    border-radius: 10px;
+    z-index: 10;
+    opacity: 0;
+  
+    transition: opacity 0.3s ease-in-out;
+   
+}
+
+.lang-dropdown.visible {
+    display: block;
+
+    opacity: 1;
+   
+}
+
+.lang-dropdown li {
+    padding: 7px;
+
+    font-size: 16px;
+    color: white;
+   
+    cursor: pointer;
+}
+
+.lang-dropdown li:hover {
+    background-color: #FF9E6D;
+    
+}
