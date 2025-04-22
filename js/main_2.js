@@ -248,6 +248,8 @@ $(window).on('scroll', function () {
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
 // 타임라인 분리 방식
+let hasPlayed = false; // 단 한 번만 실행되도록 제어할 플래그
+
 ScrollTrigger.create({
   trigger: ".mid_short_show",
   start: "top top",
@@ -257,9 +259,13 @@ ScrollTrigger.create({
   anticipatePin: 1,
   toggleActions: "play none none none",
   onEnter: () => {
+    if (hasPlayed) return; // 이미 실행됐다면 무시
+    hasPlayed = true; // 한 번 실행됐음을 기록
+
     disableScroll();
 
     gsap.set(".ligt", { scale: 0.5, opacity: 0 });
+
     const anim = gsap.timeline();
     anim
       .to(".mid_short_show", {
@@ -282,6 +288,7 @@ ScrollTrigger.create({
           align: "#thePath",
           alignOrigin: [0.5, 0.5],
           start: 0.5,
+          rotation: 360,
           end: 1.5,
           autoRotate: false
         }
@@ -310,8 +317,6 @@ ScrollTrigger.create({
       .call(enableScroll);
   }
 });
-
-
 
 
 
