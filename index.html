@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sara's drawing portfolio1</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/50acdd277a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/font.css">
+
+ 
+    <link rel="stylesheet" href="./css/style_main.css">
+    <link rel="stylesheet" href="./css/style.section.css">
+    <script src="https://kit.fontawesome.com/50acdd277a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/main_2.js"></script>
+
+    <!-- 메인슬라이드 css/js -->
+</head>
+
+<body>
+ 
+    <header>
+        <div class="inner">
+            <h1><a href="#"><img src="./img/logo.png" alt="sara's drawing logo"></a></h1>
+            <ul class="gnb">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Story</a></li>
+                <li><a href="#">Principle</a></li>
+            </ul><!-- gnb -->
+        </div><!-- inner -->
+    </header>
+    <div class="main_visual">
+            <div class="main_content">
+        <div class="main_left">
+            <div class="title">
+                <h1 class="h1">
+                    Sara<em>'</em>s <br>
+                    drawing
+                </h1>
+                <h2 class="h2">with Love</h2>
+            </div><!-- //.title -->
+
+            <p class="p3">With a warm and pure heart, <br>
+                she create designs that <br>
+                effectively convey the client's content <br>
+                to their customers.</p>
+        </div><!-- //. main_left-->
+
+        <div class="main_mid">
+            <div class="circle">
+                <div class="line">
+                    <svg width="557" height="754" viewBox="-10 -10 557 754" fill="none" xmlns="http://www.w3.org/2000/svg" style="overflow: visible;">
+                        <!-- 타원 경로 -->
+                        <path id="motionPath"
+                          d="M536.031 366.988C536.031 468.225 506.032 559.857 457.556 626.165C409.081 692.475 342.158 733.43 268.288 733.43C194.419 733.43 127.496 692.475 79.02 626.165C30.5446 559.857 0.545301 468.225 0.545301 366.988C0.545301 265.75 30.5446 174.119 79.02 107.81C127.496 41.5008 194.419 0.545301 268.288 0.545301C342.158 0.545301 409.081 41.5008 457.556 107.81C506.032 174.119 536.031 265.75 536.031 366.988Z"
+                          stroke="#4A1A4B" stroke-width="1.0906" fill="none" />
+                      
+                        <!-- 점 1: 오른쪽 위 시작 -->
+                        <circle r="6" fill="#825B3D">
+                          <animateMotion dur="40s" repeatCount="indefinite" rotate="auto">
+                            <mpath href="#motionPath" />
+                          </animateMotion>
+                        </circle>
+                      
+                        <!-- 점 2: 왼쪽 아래 시작 -->
+                        <circle r="6" fill="#825B3D">
+                          <animateMotion dur="40s" repeatCount="indefinite" rotate="auto" keyPoints="0.5;0" keyTimes="0;1" calcMode="linear">
+                            <mpath href="#motionPath" />
+                          </animateMotion>
+                        </circle>
+                      </svg>
+                </div><!-- //.line -->
+
+
+                <div class="photo">
+                    <div class="swiper profileSwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide pf"><img src="./img/profile_main/pf_img_my3.jpg" alt="img1"></div>
+                          <div class="swiper-slide pf"><img src="./img/profile_main/pf_img_my1.jpg" alt="img2"></div>
+                          <div class="swiper-slide pf"><img src="./img/profile_main/pf_img_my2.jpg" alt="img3"></div>
+                          <div class="swiper-slide pf"><img src="./img/profile_main/pf_img_my4.jpg" alt="img4"></div>
+                          
+                        </div><!-- swiper-wrapper -->
+                      </div><!--  profileSwiper -->
+
+                </div><!-- //.photo -->
+
+           </div><!-- //.circle -->
+
+
+         <div class="light_1">
+                <div class="c_txt"></div>
+                <div class="light"></div>
+            </div><!-- light_1 -->
+           
+            <a href="#">
+            <ul class="profile">
+                <li class="p4">Click on <br>
+                    the profile</li>
+                <li class="next"></li>
+            </ul><!-- //. profile-->
+        </a>
+        </div><!--  //.main_mid-->
+
+        <div class="main_right">
+
+
+                <p class="r_t_txt">To be <br>
+                    a Light <br>
+                    in the world
+                 </p>
+          
+   
+
+
+            <div class="custom-scrollbar">
+                <div class="scroll-thumb"></div>
+              </div>
+
+         
+
+            <div class="and"></div>
+        </div><!-- //.main_right -->
+       
+    </div><!-- //.main_content -->
+    </div><!-- main_visual -->
+
+   
+<div class="intro_show">
+
+    <svg class="orbit" viewBox="0 0 512 610">
+        <path id="orbitPath" d="M256,0 C397,0 512,137 512,305 C512,473 397,610 256,610 C115,610 0,473 0,305 C0,137 115,0 256,0 Z"
+              fill="none"  stroke="none"/>
+      </svg>
+      <div class="f_light"></div>
+
+   
+    <div class="all">
+        <div class="outline"></div>
+
+        <div class="mid"></div>
+
+    </div>
+   
+ </div> 
+
+
+ <div class="b_story_wrap">
+ <div class="b_story_trigger">
+    <div class="bg_spread"></div>
+  </div>
+
+    <section class="b_story">
+        
+   
+        <div class="container">
+            <div class="textbox_p5 fade-left delay1">
+        <p class="p5">We put people first. <br>
+            We embrace both beauty and functionality <br>
+            in perfect harmony. <br>
+            Our designs reflect the brand’s unique story.<br>
+            We create with a balance of stability and creativity. <br>
+            With the right values, we craft designs that bring <br>
+            warmth to the world.</p>
+            <p class="hover_p5">사람을 먼저 생각합니다. <br>
+                아름다움과 기능을 한번에 담습니다. <br>
+                브랜드의 스토리가 반영하여 디자인에 담습니다. <br>
+                안정적이고 창의적인 작업을 진행합니다.<br>
+                올바른 가치관을 가지고 세상을 따듯하게  <br>
+                할 수 있는 작업을 합니다.  </p>
+            </div><!-- //.textbox_p5 -->
+
+       
+            <div class="textbox_p6 fade-right delay2">
+        <ul class="text_u ">
+            <li class="dda1"></li>
+            <li class="p6">Design is not just about being visually pleasing;<br>
+                it is a force that transforms <br>
+                the world towards a better direction.</li>
+            <li class="p7"> - Bruno Munari</li>
+            <li class="dda2"></li>
+        </ul><!-- //.text_u -->
+
+        <ul class="hover_text_u">
+            <li class="h_dda1"></li>
+            <li class="h_p6">디자인은 단순히 보기 좋은 것이 아니라,<br>
+                세상을 더 나은 방향으로 변화시키는 힘이다.
+            <li class="h_p7"> -브루노 무나리</li>
+            <li class="h_dda2"></li>
+        </ul><!-- //.hover_text_u -->
+    </div>  <!-- //.textbox_p6 -->     
+    </div><!-- //.container -->
+    
+    <div class="illust">
+        <div class="d_light"></div>
+    
+    </div><!-- //.illust -->
+    </section><!-- //.b_story -->
+</div>
+    
+
+
+
+   
+    <section class="what_todo">
+        <div class="container">
+
+            <ul class="list_1">
+                <li class="ani br">
+                    <div class="img"></div>
+                    <p>Brochure</p>
+                </li>
+                <li class="ani ma">
+                    <div class="img"></div>
+                    <p>Marketing <br>
+                        design</p>
+                </li>
+                <li class="ani ap">
+                    <div class="img"></div>
+                    <p>App</p>
+                </li>
+            </ul><!-- //.list_1 -->
+
+            <ul class="list_2">
+
+                <li class="light_2">
+                    <div class="c_txt"></div>
+                    <div class="light"></div>
+                </li><!-- light_2 -->
+                <li class="ani we">
+                    <div class="img"></div>
+                    <p>Web</p>
+                </li>
+                <li class="ani sp">
+                    <div class="img"></div>
+                    <p>Space <br>
+                        visual design</p>
+                </li>
+
+            </ul><!-- //.list_2 -->
+
+
+        </div><!-- //.container -->
+
+        <div class="text_con">
+            <p class="ani decotxt1">Warmth to the world</p>
+            <p class="ani decotxt2">Better direction</p>
+        </div><!-- //. text_con-->
+
+        <div class="ani mark"></div>
+
+    </section><!-- //.what_todo-->
+
+    <div class="stiky_all">
+        <div class="mid_short_show_trigger">
+            <div class="show_spread"></div>
+          </div>
+
+        <section class="mid_short_show">
+            <div class="con">
+                <div class="bangbb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="417" height="606" viewBox="0 0 417 606" fill="none">
+                        <path id="thePath"
+                            d="M208.5 605.12C323.375 605.12 416.5 469.771 416.5 302.81C416.5 135.849 323.375 0.5 208.5 0.5C93.6248 0.5 0.5 135.849 0.5 302.81C0.5 469.771 93.6248 605.12 208.5 605.12Z"
+                            stroke="" stroke-miterlimit="10" />
+                    </svg>
+
+                    <div class="ligt"></div>
+                </div><!-- //.bangbb -->
+                <ul>
+                    <li class="txt1">Let's see</li>
+                    <li class="txt2"> Design work</li>
+                </ul>
+                <div class="img"></div>
+            </div><!-- //.con -->
+        </section><!-- mid_short_show -->
+
+
+         <section class="pofo_list">
+
+        <ul class="list">
+            <li class="pf_1">
+                <ul>
+                    <li class="big">Heal</li>
+                    <li class="sm">Web site design</li>
+                </ul>
+           
+                <a href="#">
+                    <div class="img"></div>
+                <p class="hover-text">View<br>project</p>
+               </a>
+           </li>
+
+
+
+            <li class="pf_2">
+                <ul>
+                    <li class="big">Yeomiji</li>
+                    <li class="sm">Web site design</li>
+                </ul>
+
+                <a href="#">
+                    <div class="img"></div>
+                <p class="hover-text">View<br>project</p>
+              </a>
+            </li>
+
+
+            <li class="pf_3">
+                <ul>
+                    <li class="big">Renewal</li>
+                    <pli class="sm">Web site design</li>
+                </ul>
+                <a href="#"><div class="img"></div>
+                <p class="hover-text">View<br>project</p>
+            </a>
+            </li>
+            <li class="pf_4">
+
+                <p class="big">App</p>
+
+                <a href="#"><div class="img"></div>
+                <p class="hover-text">View<br>project</p>
+            </a>
+            </li>
+            <li class="pf_5">
+
+                <p class="big">Visual<br>
+                    design</p>
+                    <a href="#"><div class="img"></div>
+                <p class="hover-text">View<br>project</p>
+            </a>
+            </li>
+            <li class="pf_6">
+
+                <p class="big">Space<br>
+                    design</p>
+                    <a href="#"><div class="img"></div>
+                <p class="hover-text">View<br>project</p>
+            </a>
+            </li>
+           
+              </ul><!-- list -->
+         </section><!--//.pofo_list -->
+     </div>
+
+
+
+
+
+
+
+
+    <section class="getin_t">
+      
+        <ul class="card">
+            <li class="light_ss"></li>
+           
+            <li class="touch">Get in touch</li>
+            <li class="email">Sara_D557@gmail.com</li>
+            
+            <li class="slider sealingwax">
+                <img src="img/section_getin/sealing_1.png" alt="img1">
+                <img src="img/section_getin/sealing_2.png" alt="img1">
+                <img src="img/section_getin/sealing_3.png" alt="img1">
+                <img src="img/section_getin/sealing_4.png" alt="img1">
+            </li><!-- //.slider sealingwax -->
+       
+         
+        </ul><!-- //.card -->
+      <ul class="sns_icon">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+   
+    </section><!-- //. getin_t-->
+    <footer>
+        <div class="logo"></div>
+        <p>© 2025 Sara’s drawing. All rights reserved.</p>
+    </footer>
+
+
+
+
+</body>
+
+</html>

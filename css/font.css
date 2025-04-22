@@ -1,0 +1,93 @@
+
+
+
+/* font-family: 'CaviarDreams', sans-serif; 
+ font-family: 'Against', sans-serif; 
+   font-family: 'Henotica', serif;
+   font-family: 'Classy Vogue', serif; */
+
+   @font-face {
+    font-family: 'CaviarDreams';
+    src: url('./font/CaviarDreams_2.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CaviarDreams'; 
+    src: url('./font/CaviarDreams_Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Against'; 
+    src: url('./font/against-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  @font-face {
+    font-family: 'Henotica';
+    src: url('./font/Henotica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  @font-face {
+    font-family: 'Classy Vogue';
+    src: url('./font/Classyvogueregular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Wistania';
+    src: url('./font/Wistania-BF65dbfe2d2aa5a.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+/*   font-family: 'Wistania', cursive; */
+
+
+@font-face {
+  font-family: 'Career';
+  src: url('./font/Career.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SUITE Variable';
+  src: url('./font/SUIT-Variable.woff2') format('woff2');
+  font-weight: 100 900; /* 가변 폰트의 가중치 범위 */
+  font-display: swap;
+}
+
+/* font-family: 'SUITE Variable', sans-serif; */
+
+
+@font-face {
+  font-family: 'KOROAD';
+  font-style: normal;
+  font-weight: 300;
+  src: local('KOROAD'), url('./font/KOROAD_Light.woff') format('woff');
+}
+
+
+
+@font-face {
+  font-family: 'KOROAD';
+  font-style: normal;
+  font-weight: 500;
+  src: local('KOROAD'), url('./fonts/KOROAD_MEDIUM.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'KOROAD';
+  font-style: normal;
+  font-weight: 700;
+  src: local('KOROAD'), url('./fonts/KOROAD_BOLD.woff') format('woff');
+}
