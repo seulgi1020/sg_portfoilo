@@ -993,46 +993,39 @@ background-color: #61622b;
 }
 
 .trust .con {
-    padding-top: 10vh;
+  
     position: relative;
     z-index: 1;
     height: 120vh;
-}
-
-.trust ul {
-    position: relative;
     width: 100%;
-    height: 100%;
-    perspective: 1500px;
-}
-
-
-ul.card-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-  }
-
-  .card-list {
-    width: 100%;
-    height: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    background-image: url(../img/forest.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+  .con ul.card-list {
+    width: 1640px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; 
+  
     position: relative;
-    width: 100%;
-    height: 700px;
+  
+   
+    align-self: center;
+    overflow: hidden;
   }
 
   .card-list li {
     display: flex;
-    position: absolute;
+    position:absolute;
     width: 1212 px;
     height: 642 px;
     background-color: #d2ac83;
@@ -1054,19 +1047,26 @@ ul.card-list {
   }
 
   .card-list li.shrink {
-    transform: scale(0.6);
-    opacity: 1;
+  opacity: 1;
     z-index: 1;
+    transform: scale(0.8); /* 정확히 613px x 325px로 축소됨 */
+    box-sizing: border-box;
+    transform-origin: center center;
+ 
   }
 
   /* 개별 카드 고정 위치 */
-  .sl1.shrink { top: 100px; left: 350px; }
-  .sl2.shrink { top: 140px; left: 420px; }
-  .sl3.shrink { top: 180px; left: 490px; }
-  .sl4.shrink { top: 220px; left: 560px; }
-  .sl5.shrink { top: 260px; left: 630px; }
-  .sl6.shrink { top: 300px; left: 700px; }
-  .sl7.shrink { top: 340px; left: 770px; }
+  .sl1.shrink { top: 0px;    left: 10px; }
+  .sl2.shrink { top: 89px;   left: 207px; }
+  .sl3.shrink { top: 178px;  left: 404px; }
+  .sl4.shrink { top: 267px;  left: 601px; }
+  .sl5.shrink { top: 356px;  left: 798px; }
+  .sl6.shrink { top: 445px;  left: 995px; }
+  .sl7.shrink { top: 534px;  left: 1192px; }
+
+
+
+
   .num_box {
     position: absolute;
     top: -20px;
