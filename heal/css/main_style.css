@@ -1,0 +1,1332 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+body {
+    background: #ffffff;
+    /*     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000; */
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+
+
+/* 메인슬라이드 */
+.main_visual {
+    width: 100vw;
+    height: 580px;
+}
+
+.main_visual ul {
+    width: 100vw;
+    height: 580px;
+    background: url(../img/top_main_banner/event_banner_1.png) center/cover no-repeat;
+}
+
+.main_visual ul li.slide1 {
+    background-image: url(../img/top_main_banner/event_banner_1.png);
+    background-size: cover;
+    /* 배경을 요소에 맞게 꽉 채움 */
+    background-position: center;
+    /* 이미지를 중앙 정렬 */
+    background-repeat: no-repeat;
+    /* 이미지 반복 방지 */
+    width: 100vw;
+    height: 580px;
+}
+
+.main_visual ul li.slide2 {
+    background-image: url(../img/top_main_banner/event_banner_2.png);
+    background-size: cover;
+    /* 배경을 요소에 맞게 꽉 채움 */
+    background-position: center;
+    /* 이미지를 중앙 정렬 */
+    background-repeat: no-repeat;
+    /* 이미지 반복 방지 */
+    width: 100vw;
+    height: 580px;
+}
+
+.main_visual ul li.slide3 {
+    background-image: url(../img/top_main_banner/event_banner_3.png);
+    background-size: cover;
+    /* 배경을 요소에 맞게 꽉 채움 */
+    background-position: center;
+    /* 이미지를 중앙 정렬 */
+    background-repeat: no-repeat;
+    /* 이미지 반복 방지 */
+    width: 100vw;
+    height: 580px;
+}
+
+.main_visual ul .swiper-slide {
+    width: 100vw;
+    height: 580px;
+}
+
+/* 메인슬라이드-end */
+
+/* section1(meet_doctor) */
+.container {}
+
+.container .meet_doctor {
+    width: 100%;
+    height: 904px;
+    display: flex;
+    flex-direction: column;
+    /*   justify-content: center; */
+    align-items: center;
+    margin: 0 auto;
+
+
+    background-image: url(../img/meet_doctor/section_\ meetdoctor_background.png);
+
+}
+
+.container .meet_doctor ul.button {
+    display: flex;
+    align-items: center;
+
+
+    gap: 24px;
+
+    padding-top: 80px;
+
+}
+
+.container .meet_doctor ul.button>li {
+    width: 134px;
+    height: 134px;
+
+
+}
+
+.container .meet_doctor ul.button>li:nth-child(1) {
+    background-image: url(../img/meet_doctor/icon/tee_Property\ 1=1_icon\,\ Property\ 2=off.png
+);
+    background-size: cover;
+}
+
+.container .meet_doctor ul.button>li:nth-child(2) {
+    background-image: url(../img/meet_doctor/icon/inner_Property\ 1=1_icon\,\ Property\ 2=off.png
+);
+    background-size: cover;
+}
+
+.container .meet_doctor ul.button>li:nth-child(3) {
+    background-image: url(../img/meet_doctor/icon/out_Property\ 1=1_icon\,\ Property\ 2=off.png
+);
+    background-size: cover;
+}
+
+.container .meet_doctor ul.button>li:nth-child(4) {
+    background-image: url(../img/meet_doctor/icon/preg_Property\ 1=1_icon\,\ Property\ 2=off.png
+);
+    background-size: cover;
+}
+
+.container .meet_doctor ul.button>li:nth-child(5) {
+    background-image: url(../img/meet_doctor/icon/eye_Property\ 1=1_icon\,\ Property\ 2=off.png
+);
+    background-size: cover;
+}
+
+.container .meet_doctor ul.button>li:nth-child(6) {
+    background-image: url(../img/meet_doctor/icon/skin_Property\ 1=1_icon\,\ Property\ 2=off.png 
+);
+    background-size: cover;
+}
+
+.container .meet_doctor ul.button>li:nth-child(7) {
+    background-image: url(../img/meet_doctor/icon/brain_Property\ 1=1_icon\,\ Property\ 2=off.png 
+);
+    background-size: cover;
+}
+
+.container .meet_doctor ul.button>li:nth-child(8) {
+    background-image: url(../img/meet_doctor/icon/basic_Property\ 1=1_icon\,\ Property\ 2=off.png 
+);
+    background-size: cover;
+}
+
+.container .meet_doctor ul.button>li:nth-child(1):hover {
+    background-image: url(../img/meet_doctor/icon/tee_Property\ 1=1_icon\,\ Property\ 2=on.png);
+}
+
+.container .meet_doctor ul.button>li:nth-child(2):hover {
+    background-image: url(../img/meet_doctor/icon/inner_Property\ 1=1_icon\,\ Property\ 2=on.png);
+}
+
+.container .meet_doctor ul.button>li:nth-child(3):hover {
+    background-image: url(../img/meet_doctor/icon/out_Property\ 1=1_icon\,\ Property\ 2=on.png);
+}
+
+.container .meet_doctor ul.button>li:nth-child(4):hover {
+    background-image: url(../img/meet_doctor/icon/preg_Property\ 1=1_icon\,\ Property\ 2=on.png);
+}
+
+.container .meet_doctor ul.button>li:nth-child(5):hover {
+    background-image: url(../img/meet_doctor/icon/eye_Property\ 1=1_icon\,\ Property\ 2=on.png);
+}
+
+.container .meet_doctor ul.button>li:nth-child(6):hover {
+    background-image: url(../img/meet_doctor/icon/skin_Property\ 1=1_icon\,\ Property\ 2=on.png);
+}
+
+.container .meet_doctor ul.button>li:nth-child(7):hover {
+    background-image: url(../img/meet_doctor/icon/brain_Property\ 1=1_icon\,\ Property\ 2=on.png);
+}
+
+.container .meet_doctor ul.button>li:nth-child(8):hover {
+    background-image: url(../img/meet_doctor/icon/basic_Property\ 1=1_icon\,\ Property\ 2=on.png);
+}
+
+
+
+.container .meet_doctor ul.button>li>img {
+    width: 133.92px;
+    height: 133.92px;
+}
+
+/* section1(meet_doctor)-contents */
+.container .meet_doctor .contents {
+    padding-top: 100px;
+    display: flex;
+
+}
+
+.container .meet_doctor .contents ul.intro {
+    flex-direction: column;
+}
+
+.container .meet_doctor .contents ul.intro>li {
+    align-self: flex-start;
+    align-items: center;
+}
+
+.container .meet_doctor .contents ul.intro>li>img {
+    width: 280px;
+    height: 67px;
+}
+
+.container .meet_doctor .contents ul.intro>li.text {
+    color: #868686;
+    font-size: 30px;
+    line-height: 40px;
+    margin-left: 24px;
+
+    padding-top: 38px;
+}
+
+
+
+.swiper.doctor_inner {}
+
+.container .counsel {
+    width: 100%;
+    height: 1060px;
+}
+
+.container .counsel>a {
+    background-image: url(../img/counsel/big_circle_off.png);
+}
+
+
+
+
+
+/*  .card .swiper .meet_doctor{
+    display: flex;
+  }
+ */
+.doctor_inner {
+    display: flex;
+    width: 1000px;
+    height: 496px;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+
+}
+
+
+.doctor_inner .swiper-wrapper {
+    width: 880px;
+    display: flex;
+    gap: 0 !important;
+    /*     margin-left: 16px;
+    margin-right: 16px; */
+    max-width: 880px;
+    overflow: hidden;
+}
+
+
+
+
+.doctor_inner .banner .swiper-slide {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    border-radius: 36px;
+}
+
+
+
+
+.doctor_inner .banner img {
+    width: auto;
+    /* 원본 크기 유지 */
+    height: auto;
+    /* 원본 비율 유지 */
+    max-width: 100%;
+    /* 슬라이드보다 크면 줄어들게 */
+    max-height: 100%;
+    /* 슬라이드보다 크면 줄어들게 */
+    display: block;
+    margin: 0 auto;
+    /* 가운데 정렬 */
+}
+
+.slider-item {
+    margin-right: 0px;
+    /* 또는 gap 값을 0으로 설정 */
+    padding: 0;
+}
+
+.doctor_inner .swiper-button-prev {
+    width: 14px;
+    height: 28px;
+    color: #C3DC81;
+
+}
+
+.doctor_inner .swiper-button-next {
+    width: 14px;
+    height: 28px;
+    color: #C3DC81;
+
+}
+
+/*  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
+
+/* section1(meet_doctor)-end */
+
+
+.container .health_care {
+    margin: 0 auto;
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    background: #617743;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .health_care .container_in {
+    width: 1264px;
+    height: 830px;
+    background: #8303f3;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.container .health_care .container_in p {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 40px;
+    color: #ffffff;
+    background: #868686;
+    margin-top: 30px;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.container .health_care .container_in .icon-list {
+    width: 594px;
+    height: 745px;
+    display: flex;
+    flex-direction: column;
+    background: palevioletred;
+    margin-top: auto;
+    align-self: flex-start;
+    justify-content: space-between;
+}
+
+.container .health_care .container_in .icon-list>ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.container .health_care .content-area .content-text .no1 {
+    background-image: url(../img/healthcarepart/bg/health_conner_bg_1.png);
+}
+
+.container .health_care .content-area .content-text .no2 {
+    background-image: url(../img/healthcarepart/bg/health_conner_bg_2.png);
+}
+
+.container .health_care .content-area .content-text .no3 {
+    background-image: url(../img/healthcarepart/bg/health_conner_bg_3.png);
+}
+
+.container .health_care .content-area .content-text .no4 {
+    background-image: url(../img/healthcarepart/bg/health_conner_bg_4.png);
+}
+
+.container .health_care .content-area .content-text .no5 {
+    background-image: url(../img/healthcarepart/bg/health_conner_bg_5.png);
+}
+
+.container .health_care .content-area .content-text .no6 {
+    background-image: url(../img/healthcarepart/bg/health_conner_bg_6.png);
+}
+
+.container .health_care .content-area .content-text .no7 {
+    background-image: url(../img/healthcarepart/bg/health_conner_bg_7.png);
+}
+
+.container .health_care .content-area .content-text .no8 {
+    background-image: url(../img/healthcarepart/bg/health_conner_bg_8.png);
+}
+
+.container .health_care .content-area .content-text .no9 {
+    background-image: url(../img/healthcarepart/bg/health_conner_bg_9.png);
+}
+
+.container .health_care .content-area .content-text .no10 {
+    background-image: url(../img/healthcarepart/bg/health_conner_bg_10.png);
+}
+
+.container .health_care .content-area .content-text .no11 {
+    background-image: url(../img/healthcarepart/bg/health_conner_bg_11.png);
+}
+
+.container .health_care .content-area .content-text .no12 {
+    background-image: url(../img/healthcarepart/bg/health_conner_bg_12.png);
+}
+
+
+.container .health_care .content-area .content-text .background ul {
+
+    justify-content: flex-end;
+    align-items: flex-start;
+    background: #ff0000;
+}
+
+.container .health_care .content-area .content-text.active {
+    display: block;
+}
+
+
+
+.icon-item {
+    cursor: pointer;
+    list-style: none;
+}
+
+
+/* section3(sale) */
+
+.container .sales {
+    background-image: #fff;
+    width: 100%;
+    height: 1467px;
+}
+
+.container .sales h3 {
+    font-size: 40px;
+    color: #42B8A0;
+    padding-top: 140px;
+    padding-left: 310px;
+    font-weight: 600;
+    justify-content: flex-start;
+}
+
+.container .sales h3 img {
+    align-items: center;
+    padding-right: 16px;
+}
+
+.container .sales ul.top_icon {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.container .sales ul.top_icon>li>img {
+    width: 98px;
+    height: 127px;
+    align-items: center;
+}
+
+.container .sales ul.top_icon>li>img {
+    border: none;
+    outline: none;
+
+}
+
+.container .sales ul.top_icon {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.container .sales ul.top_icon>li {
+    width: 98px;
+    height: 127px;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.container .sales ul.top_icon>li:nth-child(1) {
+
+    background-image: url(../img/popuar/dite_Property1=off.png);
+}
+
+.container .sales ul.top_icon>li:nth-child(2) {
+    background-image: url(../img/popuar/bea_Property1=off.png);
+}
+
+.container .sales ul.top_icon>li:nth-child(3) {
+    background-image: url(../img/popuar/booldh_Property1=off.png);
+}
+
+.container .sales ul.top_icon>li:nth-child(4) {
+    background-image: url(../img/popuar/dig_Property1=off.png);
+}
+
+.container .sales ul.top_icon>li:nth-child(5) {
+    background-image: url(../img/popuar/gan_Property1=off.png);
+}
+
+.container .sales ul.top_icon>li:nth-child(6) {
+    background-image: url(../img/popuar/eye_Property1=off.png);
+}
+
+.container .sales ul.top_icon>li:nth-child(7) {
+    background-image: url(../img/popuar/boold_Property1=off.png);
+}
+
+.container .sales ul.top_icon>li:nth-child(8) {
+    background-image: url(../img/popuar/meo_Property1=off.png);
+}
+
+.container .sales ul.top_icon>li:nth-child(9) {
+    background-image: url(../img/popuar/health_Property1=off.png);
+}
+
+.container .sales ul.top_icon>li:nth-child(10) {
+    background-image: url(../img/popuar/imm_li_v_icon=off.png);
+}
+
+.container .sales ul.top_icon>li:nth-child(11) {
+    background-image: url(../img/popuar/bon_Property1=off.png);
+}
+
+
+/* 
+.container .sales ul.top_icon>li:nth-child(1):hover{
+  
+    background-image: url(../img/popuar/diet_Property1=on.png);
+}
+.container .sales ul.top_icon>li:nth-child(2):hover {
+    background-image: url(../img/popuar/bea_Property1=on.png);
+}
+.container .sales ul.top_icon>li:nth-child(3):hover {
+    background-image: url(../img/popuar/booldh__Property1=on.png);
+   }
+.container .sales ul.top_icon>li:nth-child(4):hover {
+    background-image: url(../img/popuar/dig__Property1=on.png);
+}
+.container .sales ul.top_icon>li:nth-child(5):hover{
+    background-image: url(../img/popuar/gan_Property1=on.png);
+}
+.container .sales ul.top_icon>li:nth-child(6):hover{
+    background-image: url(../img/popuar/eye_Property1=on.png);
+}
+.container .sales ul.top_icon>li:nth-child(7):hover{
+    background-image: url(../img/popuar/boold_Property1=on.png);
+}
+.container .sales ul.top_icon>li:nth-child(8):hover{
+    background-image: url(../img/popuar/meo_Property1=on.png);
+}
+.container .sales ul.top_icon>li:nth-child(9):hover{
+    background-image: url(../img/popuar/health_Property1=on.png);
+}
+.container .sales ul.top_icon>li:nth-child(10):hover{
+    background-image: url(../img/popuar/imm_Property1=on.png);
+}
+.container .sales ul.top_icon>li:nth-child(11):hover{
+    background-image: url(../img/popuar/bon_Property1=on.png);
+} */
+
+.container .sales .tab_con {
+    display: flex;
+
+    width: 100%;
+    height: 908px;
+    align-items: center;
+    padding-top: 180px;
+}
+
+.container .sales .tab_con li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 40px;
+    flex-wrap: nowrap;
+    /* 줄바꿈 방지 */
+}
+
+.container .sales .tab_con li .banner {
+    display: flex;
+    margin-left: 300px;
+    width: 302px;
+    height: 912px;
+
+}
+
+.container .sales .tab_con li .banner img {
+    display: block;
+    width: 100%;
+}
+
+/* 제품 대한 스타일 지정  */
+
+.container .sales .tab_con li .lineboth {
+    display: flex;
+    width: 960px;
+    height: 913px;
+    background: #617743;
+    flex-direction: column;
+    align-items: center;
+    gap: 68px;
+
+}
+
+.container .sales .tab_con li .lineboth .line1 {
+    display: flex;
+    max-width: 960px;
+    margin-top: 0;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.container .sales .tab_con li .lineboth .line1 .p_box {
+    display: flex;
+    align-items: flex-start;
+
+    flex-direction: column;
+    width: 300px;
+    height: 422px;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+.container .sales .tab_con li .lineboth .line1 .p_box>a {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+
+    align-items: flex-start;
+
+    width: 100%;
+    height: 286px;
+}
+
+.container .sales .tab_con li .lineboth .line1 .p_box>img {
+    display: block;
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    height: auto;
+
+}
+
+.container .sales .tab_con li .lineboth .line1 .p_box>ul {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.container .sales .tab_con li .lineboth .line1 .p_box .p1 {
+    padding-top: 9px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    font-family: "Inter", sans-serif;
+    padding-left: 5px;
+}
+
+.container .sales .tab_con li .lineboth .line1 .p_box .p2 {
+    padding-top: 14px;
+    color: #868686;
+    font-size: 18px;
+    text-decoration: line-through;
+    padding-left: 5px;
+}
+
+.container .sales .tab_con li .lineboth .line1 .p_box>ul {
+    display: flex;
+    width: 290px;
+    height: 100%;
+    flex-direction: row;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.container .sales .tab_con li .lineboth .line1 .p_box>ul>li {
+    width: 100%;
+    line-height: 27px;
+    font-size: 26px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.container .sales .tab_con li .lineboth .line1 .p_box>ul>.p3>ul {
+    display: flex;
+    width: 124px;
+    white-space: nowrap;
+}
+
+.container .sales .tab_con li .lineboth .line1 .p_box>ul>li>ul>img {
+    width: 23px;
+    height: 23px;
+    margin-left: 15px;
+    border: none;
+    background-color: transparent;
+    display: block;
+
+}
+
+.container .sales .tab_con li .lineboth .line1 .p_box>ul>li>ul .p5 {
+    font-size: 26px;
+    font-weight: 400;
+    padding-left: 3px;
+
+}
+
+.container .sales .tab_con li .lineboth .line1 .p_box>ul>li>ul .p6 {
+    font-size: 16px;
+    line-height: 16px;
+    padding-left: 3px;
+    padding-top: 6px;
+}
+
+.container .sales .tab_con li .lineboth .line2 {
+    display: flex;
+    max-width: 960px;
+    margin-top: 0;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.container .sales .tab_con li .lineboth .line2 .p_box {
+    display: flex;
+    align-items: flex-start;
+
+    flex-direction: column;
+    width: 300px;
+    height: 422px;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+.container .sales .tab_con li .lineboth .line2 .p_box>a {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+
+    align-items: flex-start;
+
+    width: 100%;
+    height: 286px;
+}
+
+.container .sales .tab_con li .lineboth .line2 .p_box>img {
+    display: block;
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    height: auto;
+
+}
+
+.container .sales .tab_con li .lineboth .line2 .p_box>ul {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.container .sales .tab_con li .lineboth .line2 .p_box .p1 {
+    padding-top: 9px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    font-family: "Inter", sans-serif;
+    padding-left: 5px;
+}
+
+.container .sales .tab_con li .lineboth .line2 .p_box .p2 {
+    padding-top: 14px;
+    color: #868686;
+    font-size: 18px;
+    text-decoration: line-through;
+    padding-left: 5px;
+}
+
+.container .sales .tab_con li .lineboth .line2 .p_box>ul {
+    display: flex;
+    width: 290px;
+    height: 100%;
+    flex-direction: row;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.container .sales .tab_con li .lineboth .line2 .p_box>ul>li {
+    width: 100%;
+    line-height: 27px;
+    font-size: 26px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.container .sales .tab_con li .lineboth .line2 .p_box>ul>.p3>ul {
+    display: flex;
+    width: 124px;
+    white-space: nowrap;
+}
+
+.container .sales .tab_con li .lineboth .line2 .p_box>ul>li>ul>img {
+    width: 23px;
+    height: 23px;
+    margin-left: 15px;
+    border: none;
+    background-color: transparent;
+    display: block;
+
+}
+
+.container .sales .tab_con li .lineboth .line2 .p_box>ul>li>ul .p5 {
+    font-size: 26px;
+    font-weight: 400;
+    padding-left: 3px;
+
+}
+
+.container .sales .tab_con li .lineboth .line2 .p_box>ul>li>ul .p6 {
+    font-size: 16px;
+    line-height: 16px;
+    padding-left: 3px;
+    padding-top: 6px;
+}
+
+
+
+
+
+
+/* section3(sale) - end */
+
+
+
+
+
+
+.container .recommed_product {
+    margin: 0 auto;
+    background-image: url(../img/ex/section_recommed\ prouct.png);
+    align-items: center;
+    width: 100%;
+    height: 1116px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+.container section.top4 {
+    width: 100%;
+    height: 349px;
+    align-items: center;
+
+}
+
+.container section.top4 ul {
+    gap: 58px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container section.top4 ul>li:nth-child(1) {
+    width: 260px;
+    height: 260px;
+    background-image: url("../img/big4/self_off1.png");
+    background-size: cover;
+    transform-origin: center center;
+}
+
+.container section.top4 ul>li:nth-child(2) {
+    width: 260px;
+    height: 260px;
+    background-image: url("../img/big4/dignosis_analysis_off1.png");
+    background-size: cover;
+    transform-origin: center center;
+}
+
+.container section.top4 ul>li:nth-child(3) {
+    width: 260px;
+    height: 260px;
+    background-image: url("../img/big4/pharma_off1.png");
+    background-size: cover;
+    transform-origin: center center;
+}
+
+.container section.top4 ul>li:nth-child(4) {
+    width: 260px;
+    height: 260px;
+    background-image: url("../img/big4/straching_off1.png");
+    background-size: cover;
+    transform-origin: center center;
+}
+
+.container section.top4 ul>li:nth-child(1):hover {
+    width: 280px;
+    height: 280px;
+    background-image: url(../img/big4/self_on1.png);
+    transform: scale(1.1);
+}
+
+.container section.top4 ul>li:nth-child(2):hover {
+    width: 280px;
+    height: 280px;
+    background-image: url(../img/big4/dignosis_analysis_on1.png);
+    transform: scale(1.1);
+}
+
+.container section.top4 ul>li:nth-child(3):hover {
+    width: 280px;
+    height: 280px;
+    background-image: url(../img/big4/pharma_on1.png);
+    transform: scale(1.1);
+}
+
+.container section.top4 ul>li:nth-child(4):hover {
+    width: 280px;
+    height: 280px;
+    background-image: url(../img/big4/straching_on1.png);
+    transform: scale(1.1);
+}
+
+
+.container section.counsel {
+    width: 100%;
+    height: 1060px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* 📌 중앙 정렬을 위한 .center 스타일 */
+.container section.counsel>.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* 📍 중앙에 배치 */
+    width: 1300px;
+    height: 776px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ✅ 중앙 메인 원 */
+.container section.counsel>.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container section.counsel>.center .mid {
+    background-image: url(../img/counsel/big_circle_off.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 576px;
+    height: 576px;
+    position: absolute;
+    z-index: 30;
+}
+
+/* ✅ 중앙 원 호버 시 */
+.container section.counsel>.center .mid:hover {
+    background-image: url(../img/counsel/big_circle_on.png);
+    width: 680px;
+    height: 680px;
+}
+
+/* ✅ 텍스트 원 */
+.container section.counsel>.center .txt {
+    background-image: url(../img/counsel/circle_round_maintext.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 30px;
+    right: -40px;
+    transform: scaleX(3.0);
+    width: 950px;
+    height: 300px;
+    position: absolute;
+
+
+
+
+    scale: 1.1;
+    transform: rotate(12deg);
+    transition: transform 1s ease-in-out;
+    z-index: 33;
+    /* mid 위에 배치 */
+}
+
+/* 📌 .mid에 호버하면 텍스트 원이 회전 */
+.container section.counsel>.center .mid:hover+.txt {
+    animation: rotateText 16s linear infinite;
+}
+
+.container section.counsel>.center .mid:hover~.txt {
+    transform-origin: 345px 364px;
+    transform: rotate(360deg);
+}
+
+/* 회전 애니메이션 */
+@keyframes rotateText {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 📌 .with는 기존 위치 유지 */
+.container section.counsel>.with {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* ✅ 데코 요소 공통 스타일 */
+.container section.counsel>.with .de1,
+.container section.counsel>.with .de2,
+.container section.counsel>.with .de3,
+.container section.counsel>.with .de4,
+.container section.counsel>.with .de5 {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 10;
+    opacity: 0;
+    /* 처음에는 안보이게 */
+    transform: translateY(-20px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* ✅ 데코 요소 각각의 위치 조정 */
+.container section.counsel>.with .de1 {
+    background-image: url(../img/counsel/deco1.png);
+    top: 18px;
+    left: 60px;
+    width: 395.18px;
+    height: 431.44px;
+}
+
+.container section.counsel>.with .de2 {
+    background-image: url(../img/counsel/deco2.png);
+    top: 60px;
+    right: 130px;
+    width: 305.21px;
+    height: 258.74px;
+}
+
+.container section.counsel>.with .de3 {
+    background-image: url(../img/counsel/deco3.png);
+    top: 460px;
+    left: 150px;
+    width: 210.1px;
+    height: 210.1px;
+}
+
+.container section.counsel>.with .de4 {
+    background-image: url(../img/counsel/deco4.png);
+    top: 490px;
+    right: 130px;
+    width: 213.58px;
+    height: 188.35px;
+    scale: 0.9;
+}
+
+.container section.counsel>.with .de5 {
+    background-image: url(../img/counsel/deco5.png);
+    top: 320px;
+    right: 80px;
+    width: 325px;
+    height: 226px;
+    scale: 0.9;
+}
+
+/* ✅ .mid에 호버하면 데코 요소가 순서대로 등장 */
+.container section.counsel>.center .mid:hover~.with .de1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+}
+
+.container section.counsel>.center .mid:hover~.with .de2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.container section.counsel>.center .mid:hover~.with .de3 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+.container section.counsel>.center .mid:hover~.with .de4 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+.container section.counsel>.center .mid:hover~.with .de5 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
+}
+
+.container .news {
+    margin: 0 auto;
+    background-image: url(../img/ex/news_all_new.png);
+    align-items: center;
+    width: 100%;
+    height: 1034px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .insta {
+    background-image: url(../img/insta/instagram.png);
+    background-size: cover;
+    /* 배경 이미지가 꽉 차게 */
+    background-position: center;
+    background-repeat: no-repeat;
+    /* 중복 방지 */
+    width: 100%;
+    height: 637px;
+}
+
+/* .container .insta .insta_2 {width: 1300px; height: 200px;
+
+} */
+
+.container .insta .insta_2 .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+}
+
+.container .insta .insta_2 {
+    padding-top: 270px;
+    position: relative;
+    /* 버튼을 올바른 위치에 배치하려면 필수 */
+}
+
+/* 슬라이드 이미지 크기 조정 */
+.insta .insta_2 .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    /* 원하는 크기로 조정 */
+    height: 200px;
+}
+
+.insta .insta_2 .swiper-slide img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* 슬라이드 래퍼 */
+.insta .insta_2 .banner {
+    display: flex;
+    overflow: hidden;
+    /* 슬라이드가 넘치지 않도록 설정 */
+}
+
+/* 버튼 스타일 */
+.insta .swiper-button-next,
+.insta .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+}
+
+.insta .swiper-button-prev {
+    left: -50px;
+}
+
+.insta .swiper-button-next {
+    right: -50px;
+}
+
+/* footer */
+footer {
+    align-items: center;
+    width: 100%;
+    height: 580px;
+    background-color: #617743;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+footer .f_top {
+    display: flex;
+    flex-direction: column;
+    padding-top: 69px;
+    padding-left: 294px;
+}
+
+footer .f_top .f_menu {
+    display: flex;
+    gap: 20px;
+}
+
+footer .f_top .f_menu>li {
+    align-items: center;
+}
+
+footer .f_top .f_menu>li>a {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+}
+
+footer .f_top .f_under {
+    display: flex;
+    padding-top: 18px;
+    gap: 15px;
+}
+
+footer .f_top .f_under>li {
+    align-items: center;
+}
+
+footer .f_top .f_under>li>a {
+    font-size: 14px;
+    color: #fff;
+    font: bold;
+}
+
+footer .f_bottom {
+    display: flex;
+    padding-top: 100px;
+    padding-left: 294px;
+}
+
+footer .f_bottom h4 {
+    align-items: center;
+    padding-top: 15px;
+}
+
+footer .f_bottom .fb_middle {
+    display: flex;
+    padding-left: 240px;
+}
+
+footer .f_bottom .fb_middle .left {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .f_bottom .fb_middle .left li {
+    align-items: center;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 200;
+    padding-top: 15px;
+}
+
+footer .f_bottom .fb_middle .right {
+    display: flex;
+    flex-direction: column;
+    padding-left: 140px;
+}
+
+footer .f_bottom .fb_middle .right li {
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 200;
+    padding-top: 15px;
+}

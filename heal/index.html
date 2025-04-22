@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="종합건강관리사이트">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Seulgi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health multi-care site</title>
+    <script src="https://kit.fontawesome.com/50acdd277a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/main_style.css">
+    <!-- 메인슬라이드 css/js -->
+
+
+
+</head>
+
+<body>
+    <header>
+        <p class="top_banner">종합 헬스 케어 관리를 위한 브랜드 입니다.</p>
+        <div class="inner">
+            <h1><a href="#"><img src="./img/header/logo_heal.png" alt="heal"></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">★할인★</a></li>
+                    <li><a href="#">비타민</a></li>
+                    <li><a href="#">뼈 건강</a></li>
+                    <li><a href="#">간 건강</a></li>
+                    <li><a href="#">에너지</a></li>
+                    <li><a href="#">항산화</a></li>
+                    <li><a href="#">면역력</a></li>
+                    <li><a href="#">눈 건강</a></li>
+                    <li><a href="#">뷰티</a></li>
+                    <li><a href="#">기타건강</a></li>
+                </ul><!-- //.gnb -->
+            </nav>
+
+            <div class="h_r">
+                <div class="search">
+                    <input type="text" placeholder="검색어를 입력하세요">
+                    <button type="button"><img src="./img/header/search.png" alt="search"></button>
+                </div><!-- //.search -->
+                <ul class="right">
+                    <li><a href="#"><img src="./img/header/accounrt.png" alt="accont">계정</a></li>
+                    <li><a href="#"><img src="./img/header/mem.png" alt="membersihp">멤버쉽</a></li>
+                    <li><a href="#"><img src="./img/header/buy.png" alt="shoppingcart">장바구니</a></li>
+                </ul><!-- //.right -->
+            </div>
+        </div><!-- //.inner -->
+    </header>
+    <div class="swiper main_visual">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide slide1"><a href="#"></a></li>
+            <li class="swiper-slide slide2"><a href="#"></a></li>
+            <li class="swiper-slide slide3"><a href="#"></a></li>
+        </ul><!-- //.swiper-wrapper -->
+        <div class="swiper-pagination"></div>
+    </div><!-- //.swiper main_visual -->
+
+    <main class="container">
+        <section class="meet_doctor">
+            <ul class="button">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul><!-- //.button -->
+            <div class="contents">
+                <ul class="intro">
+                    <li><img src="./img/meet_doctor/under_icon/tee.png" alt="치과"></li>
+                    <li class="text"> 다수 경력의<br>
+                        치과 전문의를<br>
+                        만나보세요.</li>
+                </ul><!-- //.intro -->
+
+                <div class="swiper doctor_inner">
+                    <div class="swiper-wrapper banner">
+                        <div class="swiper-slide slide1"><img src="../heal/img/meet_doctor/card/tee/tee_1.png" alt="1">
+                        </div>
+                        <div class="swiper-slide slide2"><img src="../heal/img/meet_doctor/card/tee/tee_2.png" alt="2">
+                        </div>
+                        <div class="swiper-slide slide3"><img src="../heal/img/meet_doctor/card/tee/tee_3.png" alt="3">
+                        </div>
+                        <div class="swiper-slide slide4"><img src="../heal/img/meet_doctor/card/tee/tee_4.png" alt="4">
+                        </div>
+                        <div class="swiper-slide slide5"><img src="../heal/img/meet_doctor/card/tee/tee_5.png" alt="5">
+                        </div>
+                        <div class="swiper-slide slide6"><img src="../heal/img/meet_doctor/card/tee/tee_6.png" alt="6">
+                        </div>
+                    </div><!-- //. swiper-wrapper banner-->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div><!-- //.swiper doctor_inner -->
+            </div><!-- //.contents -->
+        </section><!-- //.meet_doctor" -->
+
+        <section class="health_care">
+            <div class="container_in">
+                     <p>Health Care</p>
+                <div class="icon-list">
+                    <ul class="jul_1">
+                    <li class="icon-item" data-target="content1">
+                        <img class="icon-img" src="../heal/img/healthcarepart/basic_Property 1=off.png" 
+                             alt="기본건강" 
+                             data-off="../heal/img/healthcarepart/basic_Property 1=off.png"
+                             data-on="../heal/img/healthcarepart/basic_Property 1=on.png">
+                    </li><!-- //.jul_1 -->
+                  
+                    <li class="icon-item" data-target="content2">
+                        <img class="icon-img" src="../heal/img/healthcarepart/bone_Property 1=off.png" 
+                             alt="뼈관절건강" 
+                             data-off="../heal/img/healthcarepart/bone_Property 1=off.png" 
+                             data-on="../heal/img/healthcarepart/bone_Property 1=on.png">
+                    </li>
+                        <li class="icon-item imm" data-target="content3">
+                            <img class="icon-img" src="../heal/img/healthcarepart/imm_Property 1=off.png" alt="면역력 향상" 
+                            data-off="../heal/img/healthcarepart/imm_Property 1=off.png" data-on="../heal/img/healthcarepart/imm_Property 1=on.png">
+                        </li>
+                    </ul><!-- jul_1 -->
+                    <ul class="jul_2">
+                        <li class="icon-item dig" data-target="content4">
+                            <img class="icon-img" src="../heal/img/healthcarepart/dig_Property 1=off.png" alt="소화계 계선" 
+                            data-off="../heal/img/healthcarepart/dig_Property 1=off.png" data-on="../heal/img/healthcarepart/dig_Property 1=on.png">
+                        </li>
+                        <li class="icon-item brain" data-target="content5">
+                            <img class="icon-img" src="../heal/img/healthcarepart/brain_Property 1=off.png"  alt="뇌 건강" 
+                            data-off="../heal/img/healthcarepart/brain_Property 1=off.png" data-on="../heal/img/healthcarepart/brain__Property 1=on.png">
+                        </li>
+                        <li class="icon-item cel" data-target="content6">
+                            <img class="icon-img" src="../heal/img/healthcarepart/cel_Property 1=off.png" alt="세포영양" 
+                            data-off="../heal/img/healthcarepart/cel_Property 1=off.png" data-on="../heal/img/healthcarepart/cel_Property 1=on.png">
+                        </li>
+                    </ul><!-- jul_2 -->
+                    <ul class="jul_3">
+                        <li class="icon-item sleep" data-target="content7">
+                            <img class="icon-img" src="../heal/img/healthcarepart/sep_Property 1=off.png" alt="수면개선" 
+                            data-off="../heal/img/healthcarepart/sep_Property 1=off.png" data-on="../heal/img/healthcarepart/sep_Property 1=on.png">
+                        </li>
+                        <li class="icon-item stress" data-target="content8">
+                            <img class="icon-img" src="../heal/img/healthcarepart/str_Property 1=off.png" alt="스트레스관리" 
+                            data-off="../heal/img/healthcarepart/str_Property 1=off.png" data-on="../heal/img/healthcarepart/str_Property 1=on.png">
+                        </li>
+                        <li class="icon-item enrg" data-target="content9">
+                            <img class="icon-img" src="../heal/img/healthcarepart/enr_Property 1=off.png" alt="에너지 보충" 
+                            data-off="../heal/img/healthcarepart/enr_Property 1=off.png" data-on="../heal/img/healthcarepart/enr_Property 1=on.png">
+                        </li>
+                    </ul><!-- jul_3 -->
+                    <ul class="jul_4">
+                        <li class="icon-item beau" data-target="content10">
+                            <img class="icon-img" src="../heal/img/healthcarepart/bua_Property 1=off.png" alt="뷰티" 
+                            data-off="../heal/img/healthcarepart/bua_Property 1=off.png" data-on="../heal/img/healthcarepart/bua_Property 1=on.png">
+                        </li>
+                        <li class="icon-item exr" data-target="content11">
+                            <img class="icon-img" src="../heal/img/healthcarepart/exr_Property 1=off.png" alt="운동과 영양" 
+                            data-off="../heal/img/healthcarepart/exr_Property 1=off.png" data-on="../heal/img/healthcarepart/exr_Property 1=on.png">
+                        </li>
+                        <li class="icon-item heart" data-target="12">
+                            <img class="icon-img" src="../heal/img/healthcarepart/hert_Property 1=off.png" alt="심장질환개선" 
+                            data-off="../heal/img/healthcarepart/hert_Property 1=off.png"data-on="../heal/img/healthcarepart/hert_Property 1=on.png">
+                        </li>
+                    </ul><!-- jul_4-->
+           </div><!-- //.icon-list -->
+            </div><!-- //.container in -->
+
+              
+                <!-- 배경과 내용 -->
+                <div class="content-area">
+                    <div class="content-text" id="content1"> 
+                        <div class="background no1"></div>
+                        <ul>
+                            <li class="p1">General health</li>
+                            <li class="p2">[ 기본건강 ]</li>
+                            <li class="p3">건강을 위해 다양한 운동방법을 안내해 드립니다.</li>
+                            <li class="p4">바로가기 ▶</li>
+                        </ul>
+                    </div>
+                
+                    <div class="content-text" id="content2">
+                        <div class="background no2"></div>
+                        <ul>
+                            <li class="p1">Bon & Joint</li>
+                            <li class="p2">[ 뼈/관절 관리 ]</li>
+                            <li class="p3">뼈와 관절관리를 위한 식이요법을 안내해 드립니다.</li>
+                            <li class="p4">바로가기 ▶</li>
+                        </ul>
+                    </div>
+                    
+                  <div class="content-text" id="content3">
+                    <div class="background no3"></div>
+                    <ul>
+                        <li class="p1">immunity</li>
+                        <li class="p2">[ 면역력 향상 ]</li>
+                        <li class="p3"> 면역력 향상을 위한 방법을<br>
+                            안내해 드립니다.</li>
+                        <li class="p4">바로가기 ▶</li>
+                    </ul>
+                </div><!-- //.content3  -->
+                <div class="content-text" id="content4">
+                    <div class="background no4"></div>
+                    <ul>
+                        <li class="p1">Digestive system</li>
+                        <li class="p2">[ 소화계 개선 ]</li>
+                        <li class="p3">소화를 잘되기 위한 스트레칭과<br>
+                            음식요법을
+                            알려드립니다.</li>
+                        <li class="p4">바로가기 ▶</li>
+                    </ul>
+                </div><!-- //.content4  -->
+                <div class="content-text" id="content5">
+                    <div class="background no5"></div>
+                    <ul>
+                        <li class="p1">Brian health</li>
+                        <li class="p2">[ 뇌건강 ]</li>
+                        <li class="p3">뇌를 건겅하게 하고 치매를 예방할 수 있는<br>
+                            방법을 안내해 드립니다.</li>
+                        <li class="p4">바로가기 ▶</li>
+                    </ul>
+                </div><!-- //.content5  -->
+                <div class="content-text" id="content6">
+                    <div class="background no6"></div>
+                    <ul>
+                        <li class="p1">Cell nutrition</li>
+                        <li class="p2">[ 세포영양 ]
+                        <li class="p3"> 세포영양 공급을 위한 <br>
+                            음식과 영양제를 안내해 드립니다.</li>
+                        <li class="p4">바로가기 ▶</li>
+                    </ul>
+                </div><!-- //.content6  -->
+                <div class="content-text" id="content7">
+                    <div class="background no7"></div>
+                    <ul>
+                        <li class="p1">Improved Sleep</li>
+                        <li class="p2">[ 수면개선 ]</li>
+                        <li class="p3">불면증 치료와 수면개선을 위한 <br>
+                            방법을 알려드립니다.</li>
+                        <li class="p4">바로가기 ▶</li>
+                    </ul>
+                </div><!-- //.content7  -->
+                <div class="content-text" id="content8">
+                    <div class="background no8"></div>
+                    <ul>
+                        <li class="p1">Stress</li>
+                        <li class="p2">[ 스트레스 관리 ]</li>
+                        <li class="p3"> 스트레스로 부터 정신과 몸을 <br>
+                            건강하게 지키기 위한  <br>
+                            방법을 알려드립니다.
+                        </li>
+                        <li class="p4">바로가기 ▶</li>
+                    </ul>
+                </div><!-- //.content8  -->
+                <div class="content-text" id="content9">
+                    <div class="background no9"></div>
+                    <ul>
+                        <li class="p1">Energy supplement</li>
+                        <li class="p2">[ 에너지 보충 ]</li>
+                        <li class="p3">몸의 에너지를 충전하는 방법에 대해<br>
+                            안내해 드리겠습니다.</li>
+                        <li class="p4">바로가기 ▶</li>
+                    </ul>
+                </div><!-- //.content9  -->
+                <div class="content-text" id="content10">
+                    <div class="background no10"></div>
+                    <ul>
+                        <li class="p1">Beauty</li>
+                        <li class="p2">[ 뷰티 ]</li>
+                        <li class="p3">아름다움을 건강하게 유지하고 <br>
+                            가꾸기 위한 방안을 알려드립니다.</li>
+                        <li class="p4">바로가기 ▶</li>
+                    </ul>
+                </div><!-- //.content10  -->
+                <div class="content-text" id="content11">
+                    <div class="background no11"></div>
+                    <ul>
+                        <li class="p1">Exercise & Nutrition</li>
+                        <li class="p2">[ 운동과 영양 ]</li>
+                        <li class="p3">운동할때 필요한 영양섭취와 음식을 <br>
+                            안내해 드립니다.</li>
+                        <li class="p4">바로가기 ▶</li>
+                    </ul>
+                </div><!-- //.content11  -->
+                <div class="content-text" id="content12">
+                    <div class="background no12"></div>
+                    <ul>
+                        <li class="p1">Heart disease</li>
+                        <li class="p2">[ 심장질환개선 ]</li>
+                        <li class="p3"> 심장을 건강하게 하는 음식과 <br>
+                            개선 생활방법을 안내해 드립니다.</li>
+                        <li class="p4">바로가기 ▶</li>
+                    </ul>
+                </div><!-- //.content12  -->
+                </div><!-- //.content-area -->
+           
+    </section><!-- //.health_care-->
+
+
+
+        <section class="sales">
+            <h3><img src="img/popuar/miniicon.png">카테고리별 인기아이템</h3>
+            <ul class="top_icon">
+                <li class="on"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <ul class="tab_con">
+                <li>
+                    <div class="banner"><img src="../heal/img/left_banner_sale/diet.png" alt=""></div>
+                    <div class="lineboth">
+                    <div class="line1">
+                        <div class="p_box">
+                                <a href="#"><img src="../heal/img/popuar/productimg/h_p_img.png" alt=""></a>
+
+                                <p class="p1">[랏토핏] 랏토핏 골드3통 (150일분)</p>
+                                <p class="p2">₩ 52,900</p>
+                                <ul class="pg">
+                                    <li class="p3">₩ 36,900
+                                        <ul>
+                                            <li class="p4"><img src="../heal/img/popuar/star.png" alt="별"></li>
+                                            <li class="p5">4.9</li>
+                                            <li class="p6">점 (320)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div><!-- //.p_box -->
+
+                            <div class="p_box">
+                                <a href="#"><img src="../heal/img/popuar/productimg/h_p_img.png" alt=""></a>
+
+                                <p class="p1">[랏토핏] 랏토핏 골드3통 (150일분)</p>
+                                <p class="p2">₩ 52,900</p>
+                                <ul class="pg">
+                                    <li class="p3">₩ 36,900
+                                        <ul>
+                                            <li class="p4"><img src="../heal/img/popuar/star.png" alt="별"></li>
+                                            <li class="p5">4.9</li>
+                                            <li class="p6">점 (320)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div><!-- //.p_box -->
+                     
+                           <div class="p_box">
+                                <a href="#"><img src="../heal/img/popuar/productimg/h_p_img.png" alt=""></a>
+
+                                <p class="p1">[랏토핏] 랏토핏 골드3통 (150일분)</p>
+                                <p class="p2">₩ 52,900</p>
+                                <ul class="pg">
+                                    <li class="p3">₩ 36,900
+                                        <ul>
+                                            <li class="p4"><img src="../heal/img/popuar/star.png" alt="별"></li>
+                                            <li class="p5">4.9</li>
+                                            <li class="p6">점 (320)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div><!-- //.p_box -->
+                      </div><!--//. line1 -->
+
+
+                      <div class="line2">
+                        <div class="p_box">
+                                <a href="#"><img src="../heal/img/popuar/productimg/h_p_img.png" alt=""></a>
+
+                                <p class="p1">[랏토핏] 랏토핏 골드3통 (150일분)</p>
+                                <p class="p2">₩ 52,900</p>
+                                <ul class="pg">
+                                    <li class="p3">₩ 36,900
+                                        <ul>
+                                            <li class="p4"><img src="../heal/img/popuar/star.png" alt="별"></li>
+                                            <li class="p5">4.9</li>
+                                            <li class="p6">점 (320)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div><!-- //.p_box -->
+
+                            <div class="p_box">
+                                <a href="#"><img src="../heal/img/popuar/productimg/h_p_img.png" alt=""></a>
+
+                                <p class="p1">[랏토핏] 랏토핏 골드3통 (150일분)</p>
+                                <p class="p2">₩ 52,900</p>
+                                <ul class="pg">
+                                    <li class="p3">₩ 36,900
+                                        <ul>
+                                            <li class="p4"><img src="../heal/img/popuar/star.png" alt="별"></li>
+                                            <li class="p5">4.9</li>
+                                            <li class="p6">점 (320)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div><!-- //.p_box -->
+                     
+                           <div class="p_box">
+                                <a href="#"><img src="../heal/img/popuar/productimg/h_p_img.png" alt=""></a>
+
+                                <p class="p1">[랏토핏] 랏토핏 골드3통 (150일분)</p>
+                                <p class="p2">₩ 52,900</p>
+                                <ul class="pg">
+                                    <li class="p3">₩ 36,900
+                                        <ul>
+                                            <li class="p4"><img src="../heal/img/popuar/star.png" alt="별"></li>
+                                            <li class="p5">4.9</li>
+                                            <li class="p6">점 (320)</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div><!-- //.p_box -->
+                      </div><!--//. line2-->
+                </div><!-- //. lineboth-->
+                </li><!-- //. li_1 -->
+
+
+
+
+
+
+
+            </ul><!-- //.tab_con -->
+        </section><!-- //.sales -->
+
+
+        <section class="recommed_product">
+
+        </section><!-- //.recommed_product-->
+        <section class="top4">
+            <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+
+        </section><!-- //.top4 -->
+        <section class="counsel">
+            <ul class="center">
+            <li class="mid"><a href="#"></a></li>
+             <li class="txt"></li>
+            </ul>
+            <ul class="with">
+             <li class="de1"></li>
+             <li class="de2"></li>
+             <li class="de3"></li>
+             <li class="de4"></li>
+             <li class="de5"></li>
+            </ul>
+        
+             </section><!-- //.counsel -->
+
+        <section class="news">
+
+        </section><!-- //.news -->
+        <section class="insta">
+            <div class="swiper insta_2">
+                <div class="swiper-wrapper banner">
+                    <div class="swiper-slide Slide 1"><img src="./img/insta/insta_img_1.png" alt="1"></div>
+                    <div class="swiper-slide Slide 2"><img src="./img/insta/insta_img_2.png" alt="2"></div>
+                    <div class="swiper-slide Slide 3"><img src="./img/insta/insta_img_3.png" alt="3"></div>
+                    <div class="swiper-slide Slide 4"><img src="./img/insta/insta_img_4.png" alt="4"></div>
+                    <div class="swiper-slide Slide 5"><img src="./img/insta/insta_img_5.png" alt="5"></div>
+                    <div class="swiper-slide Slide 6"><img src="./img/insta/insta_img_6.png" alt="6"></div>
+                    <div class="swiper-slide Slide 7"><img src="./img/insta/insta_img_7.png" alt="7"></div>
+
+                </div><!-- //. swiper-wrapper banner-->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div><!-- //.swiper insta_2 -->
+        </section><!-- //.insta -->
+    </main><!-- //.container -->
+
+    <footer>
+        <div class="f_top">
+            <ul class="f_menu">
+                <li><a href="#">회원신청문의 ></a></li>
+                <li><a href="#">제품문의 ></a></li>
+            </ul><!-- //.f_menu -->
+            <ul class="f_under">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">고객센터 </a></li>
+            </ul><!-- //.f_under -->
+        </div><!-- //.f_top -->
+        <div class="f_bottom">
+            <h4><a href=""><img src="./img/header/logo_w.png" alt="(주)heal"></a></h4>
+            <div class="fb_middle">
+                <ul class="left">
+                    <li>(주)Heal</li>
+                    <li>주소:경기도 성남시 분당구</li>
+                    <li>사업자등록번호:123-45-67898 </li>
+                    <li>건강기능식품판매업:제12345-67호</li>
+                    <li>의료기기판매업체:제 12345 호</li>
+                </ul><!-- //.left -->
+                <ul class="right">
+                    <li>개인정보관리책임자:별똥별</li>
+                    <li>고객센터:1004-1004</li>
+                    <li>FAX:12-312-4377</li>
+                    <li>이메일:soolg557@naver.com</li>
+                    <li>Copyright 2025</li>
+                </ul><!-- //.right -->
+            </div><!-- //.fb_middle -->
+        </div><!-- //.f_bottom -->
+    </footer>
+</body>
+
+</html>
