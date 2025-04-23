@@ -241,7 +241,7 @@ function animateCards() {
     card.classList.add('shrink');
     index++;
     setTimeout(animateCards, 600);
-  }, 1000);
+  }, 1500);
 }
 
 const observer = new IntersectionObserver((entries) => {
