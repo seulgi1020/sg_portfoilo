@@ -916,8 +916,9 @@ z-index: 0;}
 }
 
 .business .slide ul li .txt_box img {
-    height: 40px;
-    margin-bottom: 30px;
+    position: relative;
+    width: 77px;
+    height: 49px;
 }
 
 .business .slide ul li .txt_box span {
@@ -1064,7 +1065,7 @@ z-index: 0;}
 
   .con ul.card-list {
     width: 1700px;
-    height: 1000px;
+    height: 900px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1100,23 +1101,37 @@ z-index: 0;}
   .card-list li.shrink {
     opacity: 1;
     z-index: 1;
-    transform: scale(0.4);
+    transform: scale(0.56);
     transform-origin: top left;
     position: absolute;
-  
   }
-
   
  
   /* 개별 카드 고정 위치 */
-  .sl1.shrink { top: 0px; left: 0px; }
-  .sl2.shrink { top: 123.87px; left: 203.33px; }
-  .sl3.shrink { top: 247.74px; left: 406.66px; }
-  .sl4.shrink { top: 371.61px; left: 609.99px; }
-  .sl5.shrink { top: 495.48px; left: 813.32px; }
-  .sl6.shrink { top: 619.35px; left: 1016.65px; }
-  .sl7.shrink { top: 743.2px; left: 1220px; }
-
+  .sl1.shrink {
+    top: 0px;
+    left: 0px;
+  }
+  
+  .sl2.shrink {
+    top: 135.12px;
+    left: 257px;
+  }
+  
+  .sl3.shrink {
+    top: 270.24px;
+    left: 514px;
+  }
+  
+  .sl4.shrink {
+    top: 405.36px;
+    left: 771px;
+  }
+  
+  .sl5.shrink {
+    top: 540.48px;
+    left: 1028px;
+  }
 
 
 
