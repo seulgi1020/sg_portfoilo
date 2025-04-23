@@ -1,52 +1,84 @@
-<svg width="203" height="204" viewBox="0 0 203 204" fill="none" xmlns="http://www.w3.org/2000/svg">
-<ellipse cx="101.601" cy="101.389" rx="74.6807" ry="74.5251" fill="url(#paint0_radial_1043_41)"/>
-<ellipse cx="16.3124" cy="103.493" rx="16.3124" ry="103.493" transform="matrix(0.397933 0.917414 -0.918019 0.396537 190.018 40.7677)" fill="url(#paint1_radial_1043_41)" fill-opacity="0.7"/>
-<ellipse cx="9.05594" cy="83.8418" rx="9.05594" ry="83.8418" transform="matrix(-0.558197 0.829708 -0.830784 -0.556594 176.339 140.126)" fill="url(#paint2_radial_1043_41)" fill-opacity="0.5"/>
-<ellipse cx="9.06383" cy="83.7688" rx="9.06383" ry="83.7688" transform="matrix(-0.853975 -0.520314 0.521898 -0.853008 64.1099 178.34)" fill="url(#paint3_radial_1043_41)" fill-opacity="0.5"/>
-<ellipse cx="16.3364" cy="103.341" rx="16.3364" ry="103.341" transform="matrix(-0.929084 0.369868 -0.371202 -0.928552 155.357 191.915)" fill="url(#paint4_radial_1043_41)" fill-opacity="0.7"/>
-<ellipse cx="99.8637" cy="102.255" rx="62.5234" ry="62.3931" fill="url(#paint5_radial_1043_41)"/>
-<defs>
-<radialGradient id="paint0_radial_1043_41" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(101.601 101.389) rotate(90) scale(74.5251 74.6807)">
-<stop offset="0.015" stop-color="white"/>
-<stop offset="0.18" stop-color="white" stop-opacity="0.8"/>
-<stop offset="0.4" stop-color="white" stop-opacity="0.416058"/>
-<stop offset="0.649038" stop-color="white" stop-opacity="0.208029"/>
-<stop offset="0.870192" stop-color="white" stop-opacity="0"/>
-</radialGradient>
-<radialGradient id="paint1_radial_1043_41" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(16.3124 103.493) rotate(90) scale(103.493 16.3124)">
-<stop offset="0.015" stop-color="white"/>
-<stop offset="0.18" stop-color="white" stop-opacity="0.8"/>
-<stop offset="0.4" stop-color="white" stop-opacity="0.416058"/>
-<stop offset="0.585" stop-color="white" stop-opacity="0.18994"/>
-<stop offset="0.86" stop-color="white" stop-opacity="0"/>
-</radialGradient>
-<radialGradient id="paint2_radial_1043_41" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(9.05594 83.8418) rotate(90) scale(83.8418 9.05594)">
-<stop offset="0.015" stop-color="white"/>
-<stop offset="0.18" stop-color="white" stop-opacity="0.8"/>
-<stop offset="0.4" stop-color="white" stop-opacity="0.416058"/>
-<stop offset="0.585" stop-color="white" stop-opacity="0.18994"/>
-<stop offset="0.86" stop-color="white" stop-opacity="0"/>
-</radialGradient>
-<radialGradient id="paint3_radial_1043_41" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(9.06383 83.7688) rotate(90) scale(83.7688 9.06383)">
-<stop offset="0.015" stop-color="white"/>
-<stop offset="0.18" stop-color="white" stop-opacity="0.8"/>
-<stop offset="0.4" stop-color="white" stop-opacity="0.416058"/>
-<stop offset="0.585" stop-color="white" stop-opacity="0.18994"/>
-<stop offset="0.86" stop-color="white" stop-opacity="0"/>
-</radialGradient>
-<radialGradient id="paint4_radial_1043_41" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(16.3364 103.341) rotate(90) scale(103.341 16.3364)">
-<stop offset="0.015" stop-color="white"/>
-<stop offset="0.18" stop-color="white" stop-opacity="0.8"/>
-<stop offset="0.4" stop-color="white" stop-opacity="0.416058"/>
-<stop offset="0.585" stop-color="white" stop-opacity="0.18994"/>
-<stop offset="0.86" stop-color="white" stop-opacity="0"/>
-</radialGradient>
-<radialGradient id="paint5_radial_1043_41" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(99.8637 102.255) rotate(90) scale(62.3931 62.5234)">
-<stop offset="0.015" stop-color="white"/>
-<stop offset="0.18" stop-color="white" stop-opacity="0.8"/>
-<stop offset="0.331731" stop-color="white" stop-opacity="0.416058"/>
-<stop offset="0.490385" stop-color="white" stop-opacity="0.18994"/>
-<stop offset="0.841346" stop-color="white" stop-opacity="0"/>
-</radialGradient>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 203 204">
+  <!-- Generator: Adobe Illustrator 29.3.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 146)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: url(#_무제_그라디언트_85);
+      }
+
+      .st0, .st1, .st2, .st3 {
+        fill-opacity: .5;
+      }
+
+      .st1 {
+        fill: url(#_무제_그라디언트_84);
+      }
+
+      .st4 {
+        fill: url(#_무제_그라디언트_10);
+      }
+
+      .st5 {
+        fill: url(#_무제_그라디언트_83);
+      }
+
+      .st5, .st6 {
+        fill-opacity: .7;
+      }
+
+      .st2 {
+        fill: url(#_무제_그라디언트_82);
+      }
+
+      .st7 {
+        fill: url(#_무제_그라디언트_6);
+      }
+
+      .st6 {
+        fill: url(#_무제_그라디언트_8);
+      }
+
+      .st3 {
+        fill: url(#_무제_그라디언트_81);
+      }
+    </style>
+    <radialGradient id="_무제_그라디언트_10" data-name="무제 그라디언트 10" cx="-1751.9" cy="-23.8" fx="-1751.9" fy="-23.8" r="1" gradientTransform="translate(-1675.2 130668.3) rotate(90) scale(74.5 74.7)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".2" stop-color="#fff" stop-opacity=".8"/>
+      <stop offset=".4" stop-color="#fff" stop-opacity=".4"/>
+      <stop offset=".6" stop-color="#fff" stop-opacity=".2"/>
+      <stop offset=".6" stop-color="#fff" stop-opacity=".2"/>
+      <stop offset=".7" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset=".9" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="_무제_그라디언트_8" data-name="무제 그라디언트 8" cx="-1784.8" cy="-144.1" fx="-1784.8" fy="-144.1" r="1" gradientTransform="translate(-184626.7 -2253.4) rotate(-180) scale(103.5 16.3)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".2" stop-color="#fff" stop-opacity=".8"/>
+      <stop offset=".4" stop-color="#fff" stop-opacity=".4"/>
+      <stop offset=".6" stop-color="#fff" stop-opacity=".2"/>
+      <stop offset=".9" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="_무제_그라디언트_81" data-name="무제 그라디언트 8" cx="-1806.2" cy="-64.4" fx="-1806.2" fy="-64.4" r="1" gradientTransform="translate(-122996.1 -88095.2) rotate(-144.6) scale(83.8 9.1)" xlink:href="#_무제_그라디언트_8"/>
+    <radialGradient id="_무제_그라디언트_82" data-name="무제 그라디언트 8" cx="-1785.7" cy="286.1" fx="-1785.7" fy="286.1" r="1" gradientTransform="translate(149685.7 -2488.1) scale(83.8 9.1)" xlink:href="#_무제_그라디언트_8"/>
+    <radialGradient id="_무제_그라디언트_83" data-name="무제 그라디언트 8" cx="-1798.5" cy="60.2" fx="-1798.5" fy="60.2" r="1" gradientTransform="translate(-882.1 -185749.2) rotate(-90) scale(103.3 16.3)" xlink:href="#_무제_그라디언트_8"/>
+    <radialGradient id="_무제_그라디언트_6" data-name="무제 그라디언트 6" cx="-1747.2" cy="-28.4" fx="-1747.2" fy="-28.4" r="1" gradientTransform="translate(-1679.9 109115.6) rotate(90) scale(62.4 62.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".2" stop-color="#fff" stop-opacity=".8"/>
+      <stop offset=".3" stop-color="#fff" stop-opacity=".4"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".2"/>
+      <stop offset=".8" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="_무제_그라디언트_84" data-name="무제 그라디언트 8" cx="-1802.6" cy="665.9" fx="-1802.6" fy="665.9" r="1" gradientTransform="translate(150576.7 13935.7) rotate(7.5) scale(83.8 9.1) skewX(0)" xlink:href="#_무제_그라디언트_8"/>
+    <radialGradient id="_무제_그라디언트_85" data-name="무제 그라디언트 8" cx="-1754.8" cy="1008.5" fx="-1754.8" fy="1008.5" r="1" gradientTransform="translate(-146886.5 9242) rotate(-180) scale(83.8 9.1)" xlink:href="#_무제_그라디언트_8"/>
+  </defs>
+  <ellipse class="st4" cx="102.1" cy="101.7" rx="74.7" ry="74.5"/>
+  <ellipse class="st6" cx="101" cy="96.8" rx="103.5" ry="16.3" transform="translate(-30.1 48) rotate(-23.4)"/>
+  <path class="st3" d="M169.5,149.6c-2.9,4.1-35.9-14.4-73.6-41.2-37.7-26.8-66-51.9-63.1-55.9,2.9-4.1,35.9,14.4,73.6,41.2,37.7,26.8,66,51.9,63.1,55.9Z"/>
+  <ellipse class="st2" cx="99.6" cy="102.2" rx="83.8" ry="9.1" transform="translate(-41.4 124.2) rotate(-54.6)"/>
+  <ellipse class="st5" cx="101.3" cy="102" rx="16.3" ry="103.3" transform="translate(-30.6 44.9) rotate(-21.8)"/>
+  <ellipse class="st7" cx="99.4" cy="102.3" rx="62.5" ry="62.4"/>
+  <path class="st1" d="M10.3,87.3c.6-5,38.3-4.1,84.2,2,45.9,6.1,82.5,15,81.9,20-.6,5-38.4,4.1-84.2-2-45.9-6.1-82.5-15-81.9-20Z"/>
+  <ellipse class="st0" cx="101" cy="103.1" rx="83.8" ry="9.1" transform="translate(-12.9 191.8) rotate(-83.5)"/>
 </svg>

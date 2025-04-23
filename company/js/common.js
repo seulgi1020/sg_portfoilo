@@ -183,44 +183,58 @@ let businessSwiper = new Swiper('.business .slide', {
 })
 
 /* vid에 토글 클래스 적용 */
+// .vid에 on 클래스 토글 + opacity 보장
+// .vid에 스크롤 진입 시 .on 클래스 토글 + opacity 전환
 gsap.timeline({
     scrollTrigger: {
-        trigger: '.vid',
-        start: 'top 40%',
-        end: 'bottom center',
-        scrub: true,
-        toggleClass: { targets: '.vid', className: 'on' },
+      trigger: '.vid',
+      start: 'top 13%',
+      end: 'bottom center',
+      scrub: true,
+      toggleClass: {
+        targets: '.vid',
+        className: 'on'
+      },
+      onEnter: () => gsap.to(".vid", { opacity: 1, duration: 0.5 }),
+      onLeaveBack: () => gsap.to(".vid", { opacity: 0, duration: 0.5 })
     }
-})
-
-/* .vid_box 고정 처리 및 내부 video 스케일 애니메이션 */
-gsap.set(".vid_box", {
+  });
+  
+  // 초기 상태 설정
+  gsap.set(".vid_box", {
     scale: 0.5,
     borderRadius: "50%",
-    transformOrigin: "center center" // 중심 기준으로 확대
+    transformOrigin: "center center"
   });
- 
+  gsap.set(".vid", { opacity: 0 });
   
-  // 타임라인 생성 + ScrollTrigger 적용
+  // vid_box 스크롤 인터랙션 타임라인
   gsap.timeline({
     scrollTrigger: {
       trigger: ".vid_box",
-      start: "top 10%",
-      end: "top 10%+=1500",  // 1500px 스크롤 동안 애니메이션
+      start: "top 50%",
+      end: "top 50%+=1500",
       scrub: 1,
-      pin: ".vid_box",       // vid_box 고정
+      pin: ".vid_box",
       pinSpacing: true,
       pinReparent: true
     }
   })
- 
   .to(".vid_box", {
-    scale: 1,               // 최종 크기 (100%)
-    borderRadius: "0%",     // 정사각형으로
-    ease: "none"
-  }).fromTo('.vid_box iframe',
-    { scale: 0.8, transformOrigin: "center center" },
-    { scale: 1, ease: "power2.out", duration: 2 });
+    scale: 1,
+    borderRadius: "0%",
+    ease: "power1.inOut"
+  })
+  .to(".vid_box iframe, .vid_box video", {
+    scale: 1,
+    opacity: 1,
+    transformOrigin: "center center",
+    ease: "power2.out",
+    duration: 2
+  }, "<"); // 동시에 실행
+
+
+
 
 
 //trust 섹션 애니메이션
@@ -240,21 +254,33 @@ function animateCards() {
     card.classList.remove('active');
     card.classList.add('shrink');
     index++;
-    setTimeout(animateCards, 600);
-  }, 1500);
+    setTimeout(animateCards, 400);
+  }, 1000);
 }
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting && !started) {
       started = true;
+      index = 0;
+      cards.forEach(card => card.classList.remove('shrink', 'active')); // 초기화
+
       animateCards();
+
+      // ✅ 7초 후 다시 가능하게
+      setTimeout(() => {
+        started = false;
+      }, 7000);
+    }
+
+    // 🔁 뷰포트에서 벗어나면 초기화 가능 상태로 되돌림
+    if (!entry.isIntersecting) {
+      started = false;
     }
   });
 }, { threshold: 0.3 });
 
 observer.observe(document.querySelector('.trust'));
-
 
 
 

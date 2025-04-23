@@ -168,6 +168,8 @@ $(window).on('scroll', function () {
     }, 1000); // 퍼짐 시간
   }
 
+
+  
   // 1분마다 trigger를 다시 활성화하여 애니메이션이 반복되도록 설정
   setTimeout(() => {
     triggered = false;  // 1분 후 triggered 플래그 초기화
@@ -225,7 +227,11 @@ $(window).on('scroll', function () {
     window.addEventListener('touchmove', preventScroll, { passive: false });
     window.addEventListener('keydown', preventKeyScroll, { passive: false });
   
- 
+    // 스크롤 위치 강제 이동
+    const stikyTop = document.querySelector('.stiky_all')?.offsetTop;
+    if (stikyTop !== undefined) {
+      window.scrollTo({ top: stikyTop, behavior: 'instant' });
+    }
   }
   
   function enableScroll() {
@@ -242,85 +248,101 @@ $(window).on('scroll', function () {
   }
 
 
-
 /* 보라영역 */
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
 // 타임라인 분리 방식
-let hasPlayed = false; // 단 한 번만 실행되도록 제어할 플래그
 
+let animationRunning = false;
+
+const runMidShowAnimation = () => {
+  if (animationRunning) return;
+
+  animationRunning = true;
+
+  disableScroll();
+
+  // ✅ mid_short_show를 화면 최상단에 고정
+  gsap.set(".mid_short_show", {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100%",
+    zIndex: 10
+  });
+
+  gsap.set(".ligt", { scale: 0.5, opacity: 0 });
+
+  gsap.timeline({
+    onComplete: () => {
+      animationRunning = false;
+      // ✅ 애니메이션 끝난 후 스타일 원상복구
+      gsap.set(".mid_short_show", {
+        clearProps: "position,top,left,width,zIndex"
+      });
+      enableScroll();
+    }
+  })
+    .to(".mid_short_show", {
+      opacity: 1,
+      duration: 0.5,
+      ease: "power1.out",
+      delay: 0.3
+    })
+    .to(".ligt", {
+      scale: 1,
+      opacity: 1,
+      rotation: 360,
+      duration: 0.5,
+      ease: "power2.out"
+    })
+    .to(".ligt", {
+      duration: 3,
+      ease: "power1.inOut",
+      motionPath: {
+        path: "#thePath",
+        align: "#thePath",
+        alignOrigin: [0.5, 0.5],
+        rotation: 360,
+        start: 0.5,
+        end: 1.5,
+        autoRotate: false
+      }
+    })
+    .to(".ligt", {
+      y: "+=312",
+      scale: 12,
+      rotation: 360,
+      duration: 1,
+      ease: "power2.out"
+    })
+    .to(".mid_short_show", {
+      opacity: 0,
+      duration: 0.7,
+      ease: "power2.inOut"
+    })
+    .fromTo("section.pofo_list", {
+      top: '100vh',
+      opacity: 0,
+    }, {
+      top: 0,
+      duration: 1,
+      opacity: 1,
+      ease: "power2.inOut"
+    });
+};
+
+// ✅ 다시 스크롤해서 아래로 내려올 때만 실행
 ScrollTrigger.create({
   trigger: ".mid_short_show",
-  start: "top top",
+  start: "top 70%",
   end: "+=2200",
   pin: true,
   scrub: false,
   anticipatePin: 1,
-  toggleActions: "play none none none",
-  onEnter: () => {
-    if (hasPlayed) return; // 이미 실행됐다면 무시
-    hasPlayed = true; // 한 번 실행됐음을 기록
-
-    disableScroll();
-
-    gsap.set(".ligt", { scale: 0.5, opacity: 0 });
-
-    const anim = gsap.timeline();
-    anim
-      .to(".mid_short_show", {
-        opacity: 1,
-        duration: 0.5,
-        ease: "power1.out",
-        delay: 0.3
-      })
-      .to(".ligt", {
-        scale: 1,
-        opacity: 1,
-        duration: 0.5,
-        ease: "power2.out"
-      })
-      .to(".ligt", {
-        duration: 3,
-        ease: "power1.inOut",
-        motionPath: {
-          path: "#thePath",
-          align: "#thePath",
-          alignOrigin: [0.5, 0.5],
-          start: 0.5,
-          rotation: 360,
-          end: 1.5,
-          autoRotate: false
-        }
-      })
-      .to(".ligt", {
-        y: "+=312",
-        scale: 12,
-        rotation: 360,
-        duration: 1,
-        ease: "power2.out"
-      })
-      .to(".mid_short_show", {
-        opacity: 0,
-        duration: 0.7,
-        ease: "power2.inOut"
-      })
-      .fromTo("section.pofo_list", {
-        top: '100vh',
-        opacity: 0,
-      }, {
-        top: 0,
-        duration: 1,
-        opacity: 1,
-        ease: "power2.inOut"
-      })
-      .call(enableScroll);
-  }
+  onEnterBack: () => runMidShowAnimation()  // 👈 내려올 때만 실행
 });
-
-
-
-
 
 
 

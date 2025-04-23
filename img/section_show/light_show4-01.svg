@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_1" data-name=" 레이어 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 234 234">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_무제_그라디언트_8-2);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill-opacity: .5;
+      }
+
+      .cls-2 {
+        fill: url(#_무제_그라디언트_8-5);
+      }
+
+      .cls-5 {
+        fill: url(#_무제_그라디언트_10);
+      }
+
+      .cls-3 {
+        fill: url(#_무제_그라디언트_8-6);
+      }
+
+      .cls-4 {
+        fill: url(#_무제_그라디언트_8-3);
+      }
+
+      .cls-6 {
+        fill: url(#_무제_그라디언트_6);
+      }
+
+      .cls-7 {
+        fill: url(#_무제_그라디언트_8-4);
+      }
+
+      .cls-7, .cls-8 {
+        fill-opacity: .7;
+      }
+
+      .cls-8 {
+        fill: url(#_무제_그라디언트_8);
+      }
+    </style>
+    <radialGradient id="_무제_그라디언트_10" data-name="무제 그라디언트 10" cx="-1736.45" cy="-8.81" fx="-1736.45" fy="-8.81" r="1.12" gradientTransform="translate(-539.49 129528.1) rotate(90) scale(74.53 74.68)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".18" stop-color="#fff" stop-opacity=".8"/>
+      <stop offset=".4" stop-color="#fff" stop-opacity=".42"/>
+      <stop offset=".59" stop-color="#fff" stop-opacity=".21"/>
+      <stop offset=".62" stop-color="#fff" stop-opacity=".18"/>
+      <stop offset=".7" stop-color="#fff" stop-opacity=".12"/>
+      <stop offset=".77" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset=".92" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="_무제_그라디언트_8" data-name="무제 그라디언트 8" cx="-1769.36" cy="-129.07" fx="-1769.36" fy="-129.07" r="1.12" gradientTransform="translate(-183007.52 -1994.56) rotate(-180) scale(103.49 16.31)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".18" stop-color="#fff" stop-opacity=".8"/>
+      <stop offset=".4" stop-color="#fff" stop-opacity=".42"/>
+      <stop offset=".58" stop-color="#fff" stop-opacity=".19"/>
+      <stop offset=".86" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="_무제_그라디언트_8-2" data-name="무제 그라디언트 8" cx="-1790.72" cy="-49.2" fx="-1790.72" fy="-49.2" r="1.12" gradientTransform="translate(-122000.22 -87216.73) rotate(-144.6) scale(83.84 9.06)" xlink:href="#_무제_그라디언트_8"/>
+    <radialGradient id="_무제_그라디언트_8-3" data-name="무제 그라디언트 8" cx="-1770.18" cy="301.19" fx="-1770.18" fy="301.19" r="1.12" gradientTransform="translate(148401.87 -2610.76) scale(83.77 9.06)" xlink:href="#_무제_그라디언트_8"/>
+    <radialGradient id="_무제_그라디언트_8-4" data-name="무제 그라디언트 8" cx="-1782.98" cy="75.28" fx="-1782.98" fy="75.28" r="1.12" gradientTransform="translate(-1112.16 -184133.37) rotate(-90) scale(103.34 16.34)" xlink:href="#_무제_그라디언트_8"/>
+    <radialGradient id="_무제_그라디언트_6" data-name="무제 그라디언트 6" cx="-1731.77" cy="-13.42" fx="-1731.77" fy="-13.42" r="1.12" gradientTransform="translate(-726.58 108163.59) rotate(90) scale(62.39 62.52)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".18" stop-color="#fff" stop-opacity=".8"/>
+      <stop offset=".33" stop-color="#fff" stop-opacity=".42"/>
+      <stop offset=".49" stop-color="#fff" stop-opacity=".19"/>
+      <stop offset=".84" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="_무제_그라디언트_8-5" data-name="무제 그라디언트 8" cx="-1787.14" cy="680.71" fx="-1787.14" fy="680.71" r="1.12" gradientTransform="translate(149322.63 13645.6) rotate(7.54) scale(83.77 9.06) skewX(.01)" xlink:href="#_무제_그라디언트_8"/>
+    <radialGradient id="_무제_그라디언트_8-6" data-name="무제 그라디언트 8" cx="-1739.36" cy="1023.35" fx="-1739.36" fy="1023.35" r="1.12" gradientTransform="translate(-145572.35 9390.14) rotate(-180) scale(83.77 9.06)" xlink:href="#_무제_그라디언트_8"/>
+  </defs>
+  <ellipse class="cls-5" cx="119.26" cy="115.13" rx="83.52" ry="83.35"/>
+  <ellipse class="cls-8" cx="118" cy="109.64" rx="115.74" ry="18.24" transform="translate(-33.8 55.77) rotate(-23.36)"/>
+  <path class="cls-1" d="M194.58,168.66c-3.25,4.55-40.1-16.07-82.31-46.08-42.21-30-73.79-58.01-70.54-62.56,3.25-4.55,40.1,16.08,82.31,46.08,42.21,30,73.79,58.01,70.54,62.56Z"/>
+  <ellipse class="cls-4" cx="116.43" cy="115.67" rx="93.68" ry="10.13" transform="translate(-45.3 143.57) rotate(-54.6)"/>
+  <ellipse class="cls-7" cx="118.36" cy="115.49" rx="18.27" ry="115.57" transform="translate(-34.41 52.19) rotate(-21.79)"/>
+  <ellipse class="cls-6" cx="116.17" cy="115.78" rx="69.92" ry="69.77"/>
+  <path class="cls-2" d="M16.55,99.09c.73-5.55,42.89-4.55,94.19,2.25,51.29,6.79,92.29,16.8,91.56,22.34-.73,5.55-42.89,4.55-94.19-2.25-51.29-6.79-92.29-16.8-91.56-22.34Z"/>
+  <ellipse class="cls-3" cx="118.01" cy="116.77" rx="93.68" ry="10.13" transform="translate(-11.39 220.78) rotate(-83.49)"/>
+</svg>
