@@ -40,4 +40,29 @@
     font-style: normal;
     font-weight: 700;
     src: local('KOROAD'), url('fonts/KOROAD_BOLD.woff') format('woff');
+    
 }
+
+
+@font-face {
+    font-family: 'RiaSans';
+    src: url('./fonts/RiaSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'RiaSans';
+    src: url('./fonts/RiaSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'RiaSans';
+    src: url('./fonts/RiaSans-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  /* font-family: 'RiaSans', sans-serif; */

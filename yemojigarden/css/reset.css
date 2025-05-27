@@ -21,9 +21,12 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
+/* 최초 스크롤 잠금 */
+
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {

@@ -1,4 +1,9 @@
 $(function () {
+    window.history.scrollRestoration = 'manual';
+
+window.addEventListener('beforeunload', function () {
+  window.scrollTo(0, 0);
+});
 
     /* 메뉴버튼 */
     $('header nav ul.gnb > li').hover(function () {
@@ -68,6 +73,108 @@ $(function () {
     });
 
 
+/* 이벤트 티켓 구간  */
+const groupList = [
+    $('.con_1')[0],
+    $('.con_2')[0],
+    $('.con_3')[0]
+  ];
+
+  let index = 0;
+  let isAnimating = false;
+  let scrollUnlocked = false;
+  let atLastGroup = false;
+  let started = false;
+
+  let prevScrollY = window.scrollY;
+  let exitedEventZone = false;
+
+  function show(i) {
+    gsap.to(groupList[i], {
+      y: "0%",
+      opacity: 1,
+      duration: 0.6,
+      ease: "power2.out"
+    });
+  }
+
+  function hide(i) {
+    gsap.to(groupList[i], {
+      y: "100%",
+      opacity: 0,
+      duration: 0.4,
+      ease: "power2.in"
+    });
+  }
+
+  // 🔁 정확한 .event 제어 로직
+  $(window).on('scroll', function () {
+    const currentScrollY = window.scrollY;
+    const isScrollingDown = currentScrollY > prevScrollY;
+    prevScrollY = currentScrollY;
+
+    const eventRect = document.querySelector('.event').getBoundingClientRect();
+
+    // .event 완전히 벗어나면 비활성화
+    if (eventRect.bottom < 0 || eventRect.top > window.innerHeight) {
+      exitedEventZone = true;
+      started = false;
+    }
+
+    // 아래로 다시 들어올 때만 활성화
+    if (
+      exitedEventZone &&
+      isScrollingDown &&
+      eventRect.top <= 200 &&
+      eventRect.bottom >= 0 &&
+      !scrollUnlocked
+    ) {
+      started = true;
+      exitedEventZone = false;
+      $('body').css('overflow', 'hidden');
+      index = 0;
+      atLastGroup = false;
+
+      // 상태 리셋
+      groupList.forEach((el, i) => {
+        gsap.set(el, {
+          y: i === 0 ? "0%" : "100%",
+          opacity: i === 0 ? 1 : 0
+        });
+      });
+    }
+  });
+
+  // ✅ 휠 이벤트에 따라 con 전환
+  $(window).on('wheel', function (e) {
+    if (!started || scrollUnlocked || isAnimating) return;
+    if (e.originalEvent.deltaY <= 0) return;
+
+    isAnimating = true;
+
+    if (atLastGroup) {
+      $('body').css('overflow', 'auto');
+      scrollUnlocked = true;
+      isAnimating = false;
+      return;
+    }
+
+    hide(index);
+    index++;
+
+    if (index < groupList.length) {
+      show(index);
+      if (index === groupList.length - 1) {
+        atLastGroup = true;
+      }
+    }
+
+    setTimeout(() => isAnimating = false, 700);
+  });
+
+
+
+
     /* 갤러리 부분 스와이퍼 */
     let gallerySwiper = new Swiper('.myGallery', {
         effect: "coverflow",
@@ -88,6 +195,24 @@ $(function () {
           prevEl: '.myGallery .swiper-button-prev',
         }
       });
+
+
+
+
+
+  /* 플라워 페스티벌 부분 효과*/
+ const bg = document.querySelector(".festival-bg");
+
+  const bgObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !bg.classList.contains("show")) {
+        bg.classList.add("show");
+        observer.unobserve(bg);
+      }
+    });
+  }, { threshold: 0.3 });
+  
+  bgObserver.observe(bg); 
 
     /* 플라워 페스티벌 부분 스와이퍼 */
     let swiperFestival = new Swiper('.slide_ff', {

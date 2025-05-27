@@ -59,7 +59,8 @@ $(function () {
                     $('.intro_show').fadeOut(2000); // 그냥 사라지기만!
                   }, 1200);
                 }
-              });
+                
+              });    
             }
           });
         }
@@ -250,74 +251,92 @@ $(window).on('scroll', function () {
 
 /* 보라영역 */
 
-gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+document.addEventListener("DOMContentLoaded", () => {
+  initAllMidShortTriggers(); // 💡 모든 mid_short_show 등록
+});
 
-// 타임라인 분리 방식
+function initAllMidShortTriggers() {
+  document.querySelectorAll('.mid_short_show').forEach((el, index) => {
+    let localAnimationRunning = false;
 
-let animationRunning = false;
+    ScrollTrigger.create({
+      trigger: el,
+      start: "top 70%",
+      end: "bottom top",
+      scrub: false,
+      pin: false,
+      onEnter: (self) => {
+        if (localAnimationRunning || self.direction === -1) return;
+        scrollAndAnimate(el, () => { localAnimationRunning = true; }, () => { localAnimationRunning = false; });
+      },
+      onEnterBack: (self) => {
+        if (self.direction === -1 || localAnimationRunning) return;
+        scrollAndAnimate(el, () => { localAnimationRunning = true; }, () => { localAnimationRunning = false; });
+      },
+      onLeaveBack: () => { localAnimationRunning = false; },
+      onLeave: () => { localAnimationRunning = false; }
+    });
+  });
+}
 
-const runMidShowAnimation = () => {
-  if (animationRunning) return;
+function scrollAndAnimate(el, onStart, onDone) {
+  const targetTop = el.getBoundingClientRect().top + window.scrollY;
+  gsap.to(window, {
+    scrollTo: { y: targetTop, autoKill: false },
+    duration: 0.5,
+    ease: "power2.out",
+    onComplete: () => {
+      onStart();
+      runMidShowAnimation(el, onDone);
+    }
+  });
+}
 
-  animationRunning = true;
-
+function runMidShowAnimation(el, onComplete) {
   disableScroll();
 
-  // ✅ mid_short_show를 화면 최상단에 고정
-  gsap.set(".mid_short_show", {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    width: "100%",
-    zIndex: 10
-  });
+  const light = el.querySelector(".ligt");
 
-  gsap.set(".ligt", { scale: 0.5, opacity: 0 });
+  gsap.set(light, { scale: 0.5, opacity: 0 });
 
   gsap.timeline({
     onComplete: () => {
-      animationRunning = false;
-      // ✅ 애니메이션 끝난 후 스타일 원상복구
-      gsap.set(".mid_short_show", {
-        clearProps: "position,top,left,width,zIndex"
-      });
       enableScroll();
+      onComplete();
     }
   })
-    .to(".mid_short_show", {
+    .to(el, {
       opacity: 1,
       duration: 0.5,
       ease: "power1.out",
       delay: 0.3
     })
-    .to(".ligt", {
+    .to(light, {
       scale: 1,
       opacity: 1,
-      rotation: 360,
       duration: 0.5,
       ease: "power2.out"
     })
-    .to(".ligt", {
+    .to(light, {
       duration: 3,
       ease: "power1.inOut",
       motionPath: {
         path: "#thePath",
         align: "#thePath",
         alignOrigin: [0.5, 0.5],
-        rotation: 360,
         start: 0.5,
         end: 1.5,
         autoRotate: false
       }
     })
-    .to(".ligt", {
+    .to(light, {
       y: "+=312",
       scale: 12,
       rotation: 360,
       duration: 1,
       ease: "power2.out"
     })
-    .to(".mid_short_show", {
+    .to(el, {
       opacity: 0,
       duration: 0.7,
       ease: "power2.inOut"
@@ -331,21 +350,7 @@ const runMidShowAnimation = () => {
       opacity: 1,
       ease: "power2.inOut"
     });
-};
-
-// ✅ 다시 스크롤해서 아래로 내려올 때만 실행
-ScrollTrigger.create({
-  trigger: ".mid_short_show",
-  start: "top 70%",
-  end: "+=2200",
-  pin: true,
-  scrub: false,
-  anticipatePin: 1,
-  onEnterBack: () => runMidShowAnimation()  // 👈 내려올 때만 실행
-});
-
-
-
+}
 
 
 
