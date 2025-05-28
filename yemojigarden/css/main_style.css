@@ -1132,14 +1132,15 @@ background-position: center;}
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0;
     transition: all 0.5s ease;
+     transform: translate(-50%, 100%);
+    opacity: 0;
   }
-  .con_1 {
+/*   .con_1 {
     transform: translate(-50%, 0);
     opacity: 1;
   
-  }
+  } */
   
   /* 각 배경 이미지 개별 지정 */
   .event .container .con_1 {
