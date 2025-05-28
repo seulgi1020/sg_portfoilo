@@ -251,7 +251,7 @@ $(window).on('scroll', function () {
 
 /* 보라영역 */
 
-document.addEventListener("DOMContentLoaded", () => {
+/* document.addEventListener("DOMContentLoaded", () => {
   initAllMidShortTriggers(); // 💡 모든 mid_short_show 등록
 });
 
@@ -351,7 +351,7 @@ function runMidShowAnimation(el, onComplete) {
       ease: "power2.inOut"
     });
 }
-
+ */
 
 
 /* 카드 안에 이메일 주소 타이핑 */
