@@ -12,6 +12,7 @@ height:825px;
 position: relative;
 align-items: center;
 justify-content: center;
+overflow: hidden;
 
 
   background-color: #C08E54;
@@ -155,19 +156,6 @@ transform: translateY(40px);
 }
 
 
-.bike-wrapper {
-  position: fixed;
-  top: 60%;  /* ✅ 화면 중간보다 조금 아래 */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 120px;
-  z-index: 1000;
-  pointer-events: none;
-}
-
-
-
-
 .scroll-container {
   position: relative;
 
@@ -197,12 +185,11 @@ transform: translateY(40px);
 
 .gg-container{
   position:absolute;
-  top: 100px;
+  top: 900px;
 align-self: center;
   z-index: 5;
   width: 1920px;
-height: 5050px; 
-
+  height: 5050px;
   display: flex;
   justify-content: space-between;
 
@@ -1560,7 +1547,7 @@ height: 253px;
   height: 676px;
    position: absolute;
        right: 167px;
-    bottom: -18px;
+    bottom: -13px;
     z-index: 4;
     background-image: url(../img/profile_other/mystory/redord.png);
     animation: spin 7s linear infinite;

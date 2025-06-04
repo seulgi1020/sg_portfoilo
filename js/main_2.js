@@ -409,23 +409,9 @@ $(document).ready(function () {
 
 
 // 자전거 path 따라 스크롤 애니메이션
-gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
-gsap.to(".bike-wrapper", {
-  scrollTrigger: {
-    trigger: ".scroll-container",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: 1.5,
-  },
-  motionPath: {
-    path: "#bikeLine",
-    align: "#bikeLine",
-    alignOrigin: [0.5, 1],  // 바퀴 아래 기준
-    autoRotate: true
-  },
-  ease: "none"
-});
+
+
 
 // gg 요소들 등장 효과
 document.querySelectorAll('[class^="gg_"]').forEach(el => {
