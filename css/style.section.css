@@ -1,4 +1,13 @@
 @charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
 body{
   background-color:  #1B141B;
   overflow-x: hidden; /* 전체 페이지에서 가로 스크롤 방지 */
@@ -50,7 +59,7 @@ body{
 /* 메인 콘텐츠 섹션 */
 section.b_story { 
   width: 100%;
-  height: 1150px;
+height: 110dvh;
   background-color: #81592B;
   display: flex;
   align-items: center;
@@ -128,8 +137,8 @@ section.b_story.visible {
 
 
 .b_story .container{
-    width: 1256px;
-    height: 790px; 
+    width: 1300px;
+    height: 880px; 
     position: relative;
   display: flex;
   flex-direction: column;
@@ -231,8 +240,9 @@ gap: 8px;
 }
 
 .b_story .container .textbox_p6 ul.text_u li.dda1{
-    width: 50px; height: 41px;
-  transform: translateX(60px);
+width: 50px;
+ height: 41px;
+margin-left: 5px;
 background-image: url(../img/section_1/dda1.svg);
 }
 
@@ -304,7 +314,7 @@ width: 100%;
 
   .b_story .container .textbox_p6 .hover_text_u .h_dda1{
     width: 50px; height: 41px;
-  transform: translateX(294px);
+margin-left: 240px;
 margin-bottom: -5px;
 background-image: url(../img/profile_main/dda_1.png);
 }
@@ -353,8 +363,8 @@ background-image: url(../img/section_1/dda2.svg);
   height: 640px;
   display: flex;
   position: absolute;
-  top: 0;
-  margin-left: 470px;
+  top: -36px;
+  margin-left: 900px;
   align-items: center;
   background-image: url(../img/section_1/light_room.png);
   background-repeat: no-repeat;
@@ -389,7 +399,423 @@ left: 43px;
 }
 
 
-/* what_todo */
+/* 보라보라해 */
+
+
+
+
+
+
+
+.stiky_all {
+  position: relative; 
+  overflow: hidden; /* 필요 시 추가 */
+}
+
+section.mid_short_show {
+  width: 100%;
+  height: 110vh;
+  background-color: #381738;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0;
+}
+
+
+section.mid_short_show .con {
+  width: 914px;
+  height: 714px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+section.mid_short_show .con .img {
+  width: 495px;
+  height: 666px;
+  background-image: url(../img/section_show/mark_show.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  align-self: center;
+  z-index: 1;
+
+}
+
+section.mid_short_show .con>ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transform: translateX(100px);
+  margin-top: 180px;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+
+}
+
+section.mid_short_show .con>ul .txt1 {
+  font-size: 124px;
+  font-family: 'Wistania', cursive;
+  font-weight: normal;
+  line-height: 80px;
+  color: #B26F3E;
+  white-space: nowrap;
+}
+
+section.mid_short_show .con>ul .txt2 {
+  font-size: 124px;
+  font-family: 'Wistania', cursive;
+  font-weight: normal;
+  line-height: 80px;
+  color: #B26F3E;
+  white-space: nowrap;
+  transform: translateX(40px);
+  margin-top: -10px;
+}
+
+.bangbb {
+  position: relative;
+  width: 456px;
+  height: 645px;
+  left: 20px;
+  top: 20px;
+}
+
+section.mid_short_show .con .bangbb .ligt {
+  width: 234px;
+  height: 234px;
+  background-image: url(../img/section_show/light_show4-01.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -34px;
+  right: 0px;
+  z-index: 3;
+}
+.ligt.shine {
+  animation: glow 1.2s infinite ease-in-out alternate;
+  filter: drop-shadow(0 0 0.2px #fff) drop-shadow(0 0 0.5px #fff);
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 0.2px #fff) drop-shadow(0 0 1.5px #fff);
+    opacity: 0.6;
+  }
+  100% {
+    filter: drop-shadow(0 0 0.2px #fff) drop-shadow(0 0 1.5px #fff);
+    opacity: 1;
+  }
+}
+
+
+
+section.pofo_list {
+  width: 100%;
+  height: 3600px;
+  background-color: #fff;
+  /* background: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 100vh; /* mid_short_show 아래에서 시작 */
+  opacity: 0;
+}
+
+
+section.pofo_list ul.list{
+  width: 1600px;
+  height: 3400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-direction: column;
+  }
+
+
+  section.pofo_list ul.list>li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+
+    border: 0.5px solid #c78d64;
+    border-left: none;
+    border-right: none;  
+    width: 100%;
+    height: 460px;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    position: relative;
+  }
+
+
+
+  section.pofo_list ul.list>li>ul{
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+  flex-direction: column;
+   padding-left: 46px;
+   gap: 20px;
+   text-align: left;
+   width: 740px;
+   height: 100%;
+
+  }
+
+
+  
+  section.pofo_list ul.list>li>ul>.big{
+    font-family: 'Against', sans-serif; 
+    font-weight: normal;
+    font-size: 142px;
+    line-height: 142px;
+    color: #B78058;
+ 
+  }
+
+
+
+  section.pofo_list ul.list>li>.big{
+    font-family: 'Against', sans-serif; 
+    font-weight: normal;
+    font-size: 142px;
+    line-height: 160px;
+    color: #B78058;
+ 
+    width: 740px;
+    height: 100%;
+
+
+  }
+  
+
+   
+  section.pofo_list .list>li>ul>.sm{
+    font-family: 'Classy Vogue', serif;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 40px;
+    color: #B78058;
+  margin-left: 12px;
+  }
+
+
+
+  .pf_4 .big, .pf_5 .big, .pf_6 .big{
+width: 100%;
+    display: flex;
+     padding-left: 46px;
+align-items: center;
+   text-align: left;
+
+  }
+
+
+
+
+
+
+  .stiky_all .pofo_list .list>li>a{
+    display: flex;
+    width: 580px;
+    height: 320px;
+    justify-content: space-between;
+  
+    right: 30px; bottom: 0;
+    position: relative;
+
+    z-index: 3;
+  }
+
+
+
+
+  .pf_1 a .img{
+
+
+  background-size: 283px 239px; 
+  /* 공통 */
+  width: 496px;
+height: 320px;
+position: absolute;
+right: 0px; bottom: 0;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+   box-sizing: border-box;
+  /* 공통 */
+
+  background-image: url(../img/section_portfoliolist/pf_1.png);
+
+
+}
+
+
+  .pf_2 a .img{
+ 
+    background-size: 447px 256px;
+      /* 공통 */
+  width: 496px;
+  height: 320px;
+  position: absolute;
+  right: 0; bottom: 0;
+    display: flex;
+ 
+    background-image: url(../img/section_portfoliolist/pf_2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+     box-sizing: border-box;
+    /* 공통 */
+  
+  
+
+  }
+
+
+  .pf_3 a .img{
+    background-size: 320px 308px;
+  
+      /* 공통 */
+  width: 496px;
+  height: 320px;
+  position: absolute;
+  right: 0; bottom: 0;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+     box-sizing: border-box;
+    /* 공통 */
+    background-image: url(../img/section_portfoliolist/pf_3.png);
+
+ 
+
+  }
+
+
+  .pf_4 a .img{
+    
+    background-size: 378px  280px;
+          /* 공통 */
+  width: 496px;
+  height: 320px;
+  position: absolute;
+  right: 0; bottom: 0;
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+     box-sizing: border-box;
+    /* 공통 */
+    background-image: url(../img/section_portfoliolist/pf_4.png);
+ 
+  }
+  
+  .pf_5 a .img{
+  
+    background-size: 320px  213px;
+    background-image: url(../img/section_portfoliolist/pf_5.png);
+           /* 공통 */
+           width: 496px;
+           height: 320px;
+           position: absolute;
+           right: 0; bottom: 0;
+             display: flex;
+             background-position: center;
+             background-repeat: no-repeat;
+              box-sizing: border-box;
+             /* 공통 */
+  }
+
+
+  .pf_6 a .img{
+  
+    background-size: 345px 252px;
+    background-image: url(../img/section_portfoliolist/pf_6.png);
+      /* 공통 */
+      width: 496px;
+      height: 320px;
+      position: absolute;
+      right: 0; bottom: 0;
+        display: flex;
+        background-position: center;
+        background-repeat: no-repeat;
+         box-sizing: border-box;
+        /* 공통 */
+  }
+
+  section.pofo_list ul.list>li>a:hover .img {
+    display: flex;
+    width: 496px;
+    height: 320px;
+    box-sizing: border-box;
+    position: absolute;
+right: 0; bottom: 0;
+    border-left: 6px solid #C88F65;
+    background-color: #cacaca;
+    background-image: none;
+
+    transition: all 0.4s ease;
+
+  
+  }
+
+
+
+
+  .pf_1 a .img,
+.pf_2 a .img,
+.pf_3 a .img,
+.pf_4 a .img,
+.pf_5 a .img,
+.pf_6 a .img  {
+
+  transition: all 0.4s ease;
+}
+
+.stiky_all .list a .hover-text{
+  font-family: 'Classy Vogue', serif;
+  font-size: 22px;
+  line-height: 22px;
+ 
+  color: #B78058;
+
+
+  opacity: 0;
+  transition: opacity 0.7s ease;
+
+}
+
+.stiky_all section.pofo_list ul.list>li>a .hover-text {
+  opacity: 0;
+  pointer-events: none; /* 마우스 이벤트 안 받게 함 */
+
+}
+
+
+.stiky_all section.pofo_list ul.list > li>a .hover-text:hover {
+  opacity: 0;
+  pointer-events: none; /* 마우스 이벤트 안 받게 함 */
+
+}
+
+
+.stiky_all section.pofo_list ul.list > li>a:hover .hover-text {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s ease;
+}
 
 section.what_todo {
   display: flex;
@@ -817,428 +1243,28 @@ section.what_todo .container {
 }
 
 .ma.appear {
-  transition-delay: 0.6s;
+  transition-delay: 0.3s;
 }
 
 .ap.appear {
-  transition-delay: 1.2s;
+  transition-delay: 0.6s;
 }
 
 .we.appear {
-  transition-delay: 1.8s;
+  transition-delay: 0.9s;
 }
 
 .sp.appear {
-  transition-delay: 2.4s;
+  transition-delay: 1.2s;
 }
 
 .mark.appear {
-  transition-delay: 4.6s;
+  transition-delay: 1.5s;
 }
 
 
 
 
-
-
-
-
-
-
-.stiky_all {
-  position: relative; 
-  overflow: hidden; /* 필요 시 추가 */
-}
-
-section.mid_short_show {
-  width: 100%;
-  height: 100vh;
-  background-color: #381738;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  opacity: 0;
-}
-
-
-section.mid_short_show .con {
-  width: 914px;
-  height: 714px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-section.mid_short_show .con .img {
-  width: 495px;
-  height: 666px;
-  background-image: url(../img/section_show/mark_show.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  align-self: center;
-  z-index: 1;
-
-}
-
-section.mid_short_show .con>ul {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  transform: translateX(100px);
-  margin-top: 180px;
-  width: 100px;
-  height: 100px;
-  z-index: 2;
-
-}
-
-section.mid_short_show .con>ul .txt1 {
-  font-size: 124px;
-  font-family: 'Wistania', cursive;
-  font-weight: normal;
-  line-height: 80px;
-  color: #B26F3E;
-  white-space: nowrap;
-}
-
-section.mid_short_show .con>ul .txt2 {
-  font-size: 124px;
-  font-family: 'Wistania', cursive;
-  font-weight: normal;
-  line-height: 80px;
-  color: #B26F3E;
-  white-space: nowrap;
-  transform: translateX(40px);
-  margin-top: -10px;
-}
-
-.bangbb {
-  position: relative;
-  width: 456px;
-  height: 645px;
-  left: 20px;
-  top: 20px;
-}
-
-section.mid_short_show .con .bangbb .ligt {
-  width: 234px;
-  height: 234px;
-  background-image: url(../img/section_show/light_show4-01.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: -34px;
-  right: 0px;
-  z-index: 3;
-}
-
-
-
-section.pofo_list {
-  width: 100%;
-  height: 3600px;
-  background-color: #fff;
-  /* background: red; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  top: 100vh; /* mid_short_show 아래에서 시작 */
-  opacity: 0;
-}
-
-
-section.pofo_list ul.list{
-  width: 1600px;
-  height: 3400px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-  flex-direction: column;
-  }
-
-
-  section.pofo_list ul.list>li{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  
-
-    border: 0.5px solid #c78d64;
-    border-left: none;
-    border-right: none;  
-    width: 100%;
-    height: 460px;
-    box-sizing: border-box;
-    flex: 0 0 auto;
-    position: relative;
-  }
-
-
-
-  section.pofo_list ul.list>li>ul{
-    display: flex;
-    align-items:flex-start;
-    justify-content: center;
-  flex-direction: column;
-   padding-left: 46px;
-   gap: 20px;
-   text-align: left;
-   width: 740px;
-   height: 100%;
-
-  }
-
-
-  
-  section.pofo_list ul.list>li>ul>.big{
-    font-family: 'Against', sans-serif; 
-    font-weight: normal;
-    font-size: 142px;
-    line-height: 142px;
-    color: #B78058;
- 
-  }
-
-
-
-  section.pofo_list ul.list>li>.big{
-    font-family: 'Against', sans-serif; 
-    font-weight: normal;
-    font-size: 142px;
-    line-height: 160px;
-    color: #B78058;
- 
-    width: 740px;
-    height: 100%;
-
-
-  }
-  
-
-   
-  section.pofo_list .list>li>ul>.sm{
-    font-family: 'Classy Vogue', serif;
-    font-weight: normal;
-    font-size: 40px;
-    line-height: 40px;
-    color: #B78058;
-  margin-left: 12px;
-  }
-
-
-
-  .pf_4 .big, .pf_5 .big, .pf_6 .big{
-width: 100%;
-    display: flex;
-     padding-left: 46px;
-align-items: center;
-   text-align: left;
-
-  }
-
-
-
-
-
-
-  .stiky_all .pofo_list .list>li>a{
-    display: flex;
-    width: 580px;
-    height: 320px;
-    justify-content: space-between;
-  
-    right: 30px; bottom: 0;
-    position: relative;
-
-    z-index: 3;
-  }
-
-
-
-
-  .pf_1 a .img{
-
-
-  background-size: 283px 239px; 
-  /* 공통 */
-  width: 496px;
-height: 320px;
-position: absolute;
-right: 0px; bottom: 0;
-  display: flex;
-  background-position: center;
-  background-repeat: no-repeat;
-   box-sizing: border-box;
-  /* 공통 */
-
-  background-image: url(../img/section_portfoliolist/pf_1.png);
-
-
-}
-
-
-  .pf_2 a .img{
- 
-    background-size: 447px 256px;
-      /* 공통 */
-  width: 496px;
-  height: 320px;
-  position: absolute;
-  right: 0; bottom: 0;
-    display: flex;
- 
-    background-image: url(../img/section_portfoliolist/pf_2.png);
-    background-position: center;
-    background-repeat: no-repeat;
-     box-sizing: border-box;
-    /* 공통 */
-  
-  
-
-  }
-
-
-  .pf_3 a .img{
-    background-size: 320px 308px;
-  
-      /* 공통 */
-  width: 496px;
-  height: 320px;
-  position: absolute;
-  right: 0; bottom: 0;
-    display: flex;
-    background-position: center;
-    background-repeat: no-repeat;
-     box-sizing: border-box;
-    /* 공통 */
-    background-image: url(../img/section_portfoliolist/pf_3.png);
-
- 
-
-  }
-
-
-  .pf_4 a .img{
-    
-    background-size: 378px  280px;
-          /* 공통 */
-  width: 496px;
-  height: 320px;
-  position: absolute;
-  right: 0; bottom: 0;
-    display: flex;
-    background-position: center;
-    background-repeat: no-repeat;
-     box-sizing: border-box;
-    /* 공통 */
-    background-image: url(../img/section_portfoliolist/pf_4.png);
- 
-  }
-  
-  .pf_5 a .img{
-  
-    background-size: 320px  213px;
-    background-image: url(../img/section_portfoliolist/pf_5.png);
-           /* 공통 */
-           width: 496px;
-           height: 320px;
-           position: absolute;
-           right: 0; bottom: 0;
-             display: flex;
-             background-position: center;
-             background-repeat: no-repeat;
-              box-sizing: border-box;
-             /* 공통 */
-  }
-
-
-  .pf_6 a .img{
-  
-    background-size: 345px 252px;
-    background-image: url(../img/section_portfoliolist/pf_6.png);
-      /* 공통 */
-      width: 496px;
-      height: 320px;
-      position: absolute;
-      right: 0; bottom: 0;
-        display: flex;
-        background-position: center;
-        background-repeat: no-repeat;
-         box-sizing: border-box;
-        /* 공통 */
-  }
-
-  section.pofo_list ul.list>li>a:hover .img {
-    display: flex;
-    width: 496px;
-    height: 320px;
-    box-sizing: border-box;
-    position: absolute;
-right: 0; bottom: 0;
-    border-left: 6px solid #C88F65;
-    background-color: #cacaca;
-    background-image: none;
-
-    transition: all 0.4s ease;
-
-  
-  }
-
-
-
-
-  .pf_1 a .img,
-.pf_2 a .img,
-.pf_3 a .img,
-.pf_4 a .img,
-.pf_5 a .img,
-.pf_6 a .img  {
-
-  transition: all 0.4s ease;
-}
-
-.stiky_all .list a .hover-text{
-  font-family: 'Classy Vogue', serif;
-  font-size: 22px;
-  line-height: 22px;
- 
-  color: #B78058;
-
-
-  opacity: 0;
-  transition: opacity 0.7s ease;
-
-}
-
-.stiky_all section.pofo_list ul.list>li>a .hover-text {
-  opacity: 0;
-  pointer-events: none; /* 마우스 이벤트 안 받게 함 */
-
-}
-
-
-.stiky_all section.pofo_list ul.list > li>a .hover-text:hover {
-  opacity: 0;
-  pointer-events: none; /* 마우스 이벤트 안 받게 함 */
-
-}
-
-
-.stiky_all section.pofo_list ul.list > li>a:hover .hover-text {
-  opacity: 1;
-  pointer-events: auto;
-  transition: opacity 0.5s ease;
-}
 
 
 

@@ -40,7 +40,9 @@ $(function () {
               alignOrigin: [0.5, 0.5],
               autoRotate: false
             },
+            
             onStart: function () {
+                 document.querySelector('.f_light').classList.add('shine');
               gsap.to(".outline", {
                 duration: 3,
                 opacity: 1,
@@ -125,6 +127,7 @@ $(function () {
 // 
 
 
+
 /* .b_story 화면 보이기 */
 const $trigger = $('.b_story_trigger');
 const $bgSpread = $('.bg_spread');
@@ -194,28 +197,7 @@ $(window).on('scroll', function () {
 });
 
 
-/* what to do  */
-  // 요소 나타나기
-  $(window).on('scroll', function () {
-    const selectors = ['.br', '.ma', '.ap', '.we', '.sp', '.mark', '.text_con'];
-    $.each(selectors, function (_, selector) {
-      const $el = $(selector);
-      if (!$el.length) return;
-      const elTop = $el.offset().top;
-      const elHeight = $el.outerHeight();
-      const scrollTop = $(window).scrollTop();
-      const windowHeight = $(window).height();
-      const elVisibleHeight = (scrollTop + windowHeight) - elTop;
-      const visibleRatio = elVisibleHeight / elHeight;
-      if (visibleRatio >= 0.7 && !$el.hasClass('appear')) {
-        $el.addClass('appear');
-        if (selector === '.text_con') {
-          setTimeout(() => $(".decotxt1").addClass("typing"), 2500);
-          setTimeout(() => $(".decotxt2").addClass("typing"), 4500);
-        }
-      }
-    });
-  });
+
 
 
 
@@ -251,108 +233,105 @@ $(window).on('scroll', function () {
 
 /* 보라영역 */
 
-/* document.addEventListener("DOMContentLoaded", () => {
-  initAllMidShortTriggers(); // 💡 모든 mid_short_show 등록
-});
+gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
-function initAllMidShortTriggers() {
-  document.querySelectorAll('.mid_short_show').forEach((el, index) => {
-    let localAnimationRunning = false;
+  // 타임라인 분리 방식
+  ScrollTrigger.create({
+    trigger: ".mid_short_show",
+    start: "top top",
+    end: "+=2200",
+    pin: true,
+    scrub: false,
+    anticipatePin: 1,
+    toggleActions: "restart none none none",
+    onEnter: () => {
+      disableScroll();
 
-    ScrollTrigger.create({
-      trigger: el,
-      start: "top 70%",
-      end: "bottom top",
-      scrub: false,
-      pin: false,
-      onEnter: (self) => {
-        if (localAnimationRunning || self.direction === -1) return;
-        scrollAndAnimate(el, () => { localAnimationRunning = true; }, () => { localAnimationRunning = false; });
-      },
-      onEnterBack: (self) => {
-        if (self.direction === -1 || localAnimationRunning) return;
-        scrollAndAnimate(el, () => { localAnimationRunning = true; }, () => { localAnimationRunning = false; });
-      },
-      onLeaveBack: () => { localAnimationRunning = false; },
-      onLeave: () => { localAnimationRunning = false; }
-    });
-  });
-}
+      gsap.set(".ligt", { scale: 0.5, opacity: 0 });
+      const anim = gsap.timeline();
+      anim
+        .to(".mid_short_show", {
+          opacity: 1,
+          duration: 0.5,
+          ease: "power1.out",
+          delay: 0.3
+        })
+        .to(".ligt", {
+          scale: 1,
+          rotate:360*3,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out",
+            onStart: () => {
+    document.querySelector('.ligt').classList.add('shine');
+  }
+        })
+        
+.to(".ligt", {
+  duration: 3,
+  ease: "power1.inOut",
+  motionPath: {
+    path: "#thePath",
+    align: "#thePath",
+    alignOrigin: [0.5, 0.5],
+    start: 0.5,
+    end: 1.5,
+    autoRotate: false
+  }
+}, "<") // 동시에 시작
 
-function scrollAndAnimate(el, onStart, onDone) {
-  const targetTop = el.getBoundingClientRect().top + window.scrollY;
-  gsap.to(window, {
-    scrollTo: { y: targetTop, autoKill: false },
-    duration: 0.5,
-    ease: "power2.out",
-    onComplete: () => {
-      onStart();
-      runMidShowAnimation(el, onDone);
+.to(".ligt", {
+  duration: 3,
+  rotation: "+=1080", // 제자리 회전만 따로
+  ease: "none"
+}, "<") // 이것도 동시에 시작
+        .to(".ligt", {
+          y: "+=312",
+          scale: 12,
+          rotation: 360*2,
+          duration: 1,
+          ease: "power2.out"
+        })
+        .to(".mid_short_show", {
+          opacity: 0,
+          duration: 0.7,
+          ease: "power2.inOut"
+        })
+        .fromTo("section.pofo_list", {
+          top: '100vh',
+          opacity: 0,
+        }, {
+          top: 0,
+          duration: 1,
+          opacity: 1,
+          ease: "power2.inOut"
+        })
+        .call(enableScroll);
     }
   });
-}
 
-function runMidShowAnimation(el, onComplete) {
-  disableScroll();
-
-  const light = el.querySelector(".ligt");
-
-  gsap.set(light, { scale: 0.5, opacity: 0 });
-
-  gsap.timeline({
-    onComplete: () => {
-      enableScroll();
-      onComplete();
-    }
-  })
-    .to(el, {
-      opacity: 1,
-      duration: 0.5,
-      ease: "power1.out",
-      delay: 0.3
-    })
-    .to(light, {
-      scale: 1,
-      opacity: 1,
-      duration: 0.5,
-      ease: "power2.out"
-    })
-    .to(light, {
-      duration: 3,
-      ease: "power1.inOut",
-      motionPath: {
-        path: "#thePath",
-        align: "#thePath",
-        alignOrigin: [0.5, 0.5],
-        start: 0.5,
-        end: 1.5,
-        autoRotate: false
+/* what to do  */
+  // 요소 나타나기
+  $(window).on('scroll', function () {
+    const selectors = ['.br', '.ma', '.ap', '.we', '.sp', '.mark', '.text_con'];
+    $.each(selectors, function (_, selector) {
+      const $el = $(selector);
+      if (!$el.length) return;
+      const elTop = $el.offset().top;
+      const elHeight = $el.outerHeight();
+      const scrollTop = $(window).scrollTop();
+      const windowHeight = $(window).height();
+      const elVisibleHeight = (scrollTop + windowHeight) - elTop;
+      const visibleRatio = elVisibleHeight / elHeight;
+      if (visibleRatio >= 0.7 && !$el.hasClass('appear')) {
+        $el.addClass('appear');
+        if (selector === '.text_con') {
+          setTimeout(() => $(".decotxt1").addClass("typing"), 1800);
+          setTimeout(() => $(".decotxt2").addClass("typing"), 3000);
+        }
       }
-    })
-    .to(light, {
-      y: "+=312",
-      scale: 12,
-      rotation: 360,
-      duration: 1,
-      ease: "power2.out"
-    })
-    .to(el, {
-      opacity: 0,
-      duration: 0.7,
-      ease: "power2.inOut"
-    })
-    .fromTo("section.pofo_list", {
-      top: '100vh',
-      opacity: 0,
-    }, {
-      top: 0,
-      duration: 1,
-      opacity: 1,
-      ease: "power2.inOut"
     });
-}
- */
-
+  });
 
 /* 카드 안에 이메일 주소 타이핑 */
 
@@ -416,6 +395,142 @@ $(document).ready(function () {
 
 
 
+
+
+
+
+/* 프로필 라인 */
+
+
+
+
+
+
+
+
+// 자전거 path 따라 스크롤 애니메이션
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+
+gsap.to(".bike-wrapper", {
+  scrollTrigger: {
+    trigger: ".scroll-container",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 1.5,
+  },
+  motionPath: {
+    path: "#bikeLine",
+    align: "#bikeLine",
+    alignOrigin: [0.5, 1],  // 바퀴 아래 기준
+    autoRotate: true
+  },
+  ease: "none"
+});
+
+// gg 요소들 등장 효과
+document.querySelectorAll('[class^="gg_"]').forEach(el => {
+  ScrollTrigger.create({
+    trigger: el,
+    start: "top 85%",
+    onEnter: () => el.classList.add("show"),
+  });
+});
+
+// sg 요소들 등장 효과
+document.querySelectorAll('[class^="sg"]').forEach(el => {
+  ScrollTrigger.create({
+    trigger: el,
+    start: "top 85%",
+    onEnter: () => el.classList.add("show"),
+  });
+});
+
+
+
+
+
+
+// 프로그램 항목 순차 등장 애니메이션
+// 이 코드는 main_2.js에 추가해줘
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top < window.innerHeight && rect.bottom > 0
+  );
+}
+
+function handleScroll() {
+  const section = document.querySelector(".avaliable");
+  if (!section) return;
+
+  if (isInViewport(section)) {
+    section.classList.add("active");
+  } else {
+    section.classList.remove("active"); // 다시 올라가면 제거 (반복)
+  }
+}
+
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("load", handleScroll);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mystory  애니메이션  */
+gsap.registerPlugin(ScrollTrigger);
+
+const elements = [
+  ".music_1", ".music_2", ".music_3", ".music_4", ".music_5",
+  ".shadowback", ".beskin", ".flower", ".clicktower", ".bag",
+  ".fountain", ".austria", ".drawing", ".riding", ".jomal"
+];
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".all",
+    start: "top 50%", // 👉 화면 정중앙쯤에 올 때 시작
+    toggleActions: "restart none none none", // 스크롤로 올 때마다 반복
+    // markers: true // 디버깅시 사용
+  },
+  defaults: {
+    duration: 0.4,
+    ease: "power2.out"
+  }
+});
+
+// 🎵 순서대로 등장
+elements.forEach(selector => {
+  tl.to(selector, { opacity: 1, y: 0 });
+});
 
 });
 

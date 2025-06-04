@@ -129,16 +129,16 @@ tl.to('.txt_area strong.tit', {
     backgroundSize: '100%',
     duration: 1,
     ease: 'none'
-}, '+=0.6')
+}, '+=0.4')
     .to('.txt_area em.tit', {
         backgroundSize: '100%',
         duration: 1,
         ease: 'none'
-    }, '+=1.2').to('.txt_area i.tit', {
+    }, '+=0.8').to('.txt_area i.tit', {
         backgroundSize: '100%',
         duration: 1,
         ease: 'none'
-    }, '+=1.8')
+    }, '+=1.2')
 
 
 // 카드 한바뀌 돌기
@@ -147,8 +147,8 @@ brandCards.forEach((card, i) => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: '.brand',
-            start: `top+=${i * 300} center`,
-            end: `top+=${(i + 1) * 300} center`,
+            start: `top+=${i * 250} center`,
+            end: `top+=${(i + 1) * 250} center`,
             scrub: 1.2,
         }
     });
@@ -239,7 +239,6 @@ gsap.timeline({
 
 //trust 섹션 애니메이션
 
-
 const cards = document.querySelectorAll('.card-list li');
 let started = false;
 let index = 0;
@@ -260,27 +259,50 @@ function animateCards() {
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting && !started) {
-      started = true;
-      index = 0;
-      cards.forEach(card => card.classList.remove('shrink', 'active')); // 초기화
+    const target = entry.target;
 
-      animateCards();
+    if (entry.isIntersecting) {
+      if (target.classList.contains('trust') && !started) {
+        started = true;
+        index = 0;
+        cards.forEach(card => card.classList.remove('shrink', 'active'));
 
-      // ✅ 7초 후 다시 가능하게
-      setTimeout(() => {
-        started = false;
-      }, 7000);
+        // 가구 요소 초기화
+        document.querySelector('.trust .fur_all_1')?.classList.remove('show');
+        document.querySelector('.trust .fur_all_2')?.classList.remove('show');
+
+        animateCards();
+
+        // 3초 후에 가구 요소 등장
+        setTimeout(() => {
+          document.querySelector('.trust .fur_all_1')?.classList.add('show');
+          document.querySelector('.trust .fur_all_2')?.classList.add('show');
+        }, 5000);
+
+        // 7초 후 다시 재실행 가능
+        setTimeout(() => {
+          started = false;
+        }, 7000);
+      }
     }
 
-    // 🔁 뷰포트에서 벗어나면 초기화 가능 상태로 되돌림
-    if (!entry.isIntersecting) {
+    if (!entry.isIntersecting && target.classList.contains('trust')) {
       started = false;
+
+      // 카드 초기화
+      cards.forEach(card => card.classList.remove('shrink', 'active'));
+
+      // 가구 숨김 처리
+      document.querySelector('.trust .fur_all_1')?.classList.remove('show');
+      document.querySelector('.trust .fur_all_2')?.classList.remove('show');
     }
   });
 }, { threshold: 0.3 });
 
 observer.observe(document.querySelector('.trust'));
+
+
+
 
 
 
@@ -297,5 +319,17 @@ let newsSwiper = new Swiper('.news .con', {
         el: ".news .swiper-pagination",
         type: "progressbar",
     },
-    spaceBetween: 50,
+    spaceBetween: 70,
 })
+
+
+
+function applySimolyScroll(selector, speed = 4, direction = 'forwards') {
+    $(selector).simplyScroll({
+        speed,
+        direction,
+        pauseOnHover: true,
+        pauseOnTouch: true,
+    })
+}
+applySimolyScroll('.footer .list2'); 

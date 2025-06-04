@@ -36,6 +36,18 @@ $(function () {
   });
 
 
+// 오픈채팅방
+    const $talkbox = $('.talkbox');
+    const $openBtn = $('.tlaktlak');
+    const $closeBtn = $('.x_box');
+
+    $openBtn.on('click', function () {
+      $talkbox.show(); // 또는 fadeIn()
+    });
+
+    $closeBtn.on('click', function () {
+      $talkbox.hide(); // 또는 fadeOut()
+    });
 
 
 
@@ -73,7 +85,12 @@ $(function () {
   });
 
 
-  /* 이벤트 티켓 구간  */
+
+
+
+
+
+/* 이벤트냐옹옹  */
 gsap.registerPlugin(ScrollTrigger);
 
 const groupList = [
@@ -82,96 +99,105 @@ const groupList = [
   document.querySelector('.con_3')
 ];
 
-let currentIndex = 0;
+const eventSection = document.querySelector('.event');
+
+let index = 1;
 let isAnimating = false;
+let hasStarted = false;
+let hasFirstScrollSkipped = false;
+let lastEnteredFromTop = false;
 
-// 초기 상태 설정
-groupList.forEach(el => {
-  gsap.set(el, { y: '100%', opacity: 0 });
-});
+// ✅ 스크롤 잠금 / 해제
+function disableScroll() {
+  document.body.style.overflow = 'hidden';
+  document.documentElement.style.overflow = 'hidden';
+}
 
-// 스크롤 트리거
+function enableScroll() {
+  document.body.style.overflow = '';
+  document.documentElement.style.overflow = '';
+}
+
+// ✅ 초기화 함수
+function initSlides() {
+  groupList.forEach((el, i) => {
+    gsap.set(el, {
+      y: i === 0 ? '0%' : '100%',
+      opacity: i === 0 ? 1 : 0
+    });
+  });
+  index = 1;
+  isAnimating = false;
+  hasFirstScrollSkipped = false;
+}
+
+// ✅ ScrollTrigger 설정
 ScrollTrigger.create({
-  trigger: ".event",
-  start: "top 80%",
+  trigger: ".e_container",
+  start: "top+=100 center", // .e_container의 top에서 100px 아래 지점이 center에 도달할 때
   end: "bottom top",
-  once: true,
-  onEnter: () => {
-    isAnimating = true;
-    currentIndex = 0;
 
-    showSlide(currentIndex);
-    document.body.style.overflow = 'hidden';
-    nextSlide();
+  onEnter: (self) => {
+    if (self.direction === 1) {
+      hasStarted = true;
+      lastEnteredFromTop = true;
+      initSlides();
+      disableScroll();
+    }
   },
+
   onLeave: () => {
-    isAnimating = false;
-    document.body.style.overflow = '';
+    hasStarted = false;
+    enableScroll();
+  },
+
+  onLeaveBack: () => {
+    hasStarted = false;
+    lastEnteredFromTop = false; // 아래에서 올라오는 건 다시 true 되지 않음
+    enableScroll();
   }
 });
 
-function showSlide(i) {
-  gsap.to(groupList[i], {
-    y: '0%',
-    opacity: 1,
-    duration: 0.6,
-    ease: 'power2.out'
-  });
-}
+// ✅ wheel 이벤트 처리
+eventSection.addEventListener("wheel", (e) => {
+  if (!hasStarted || !lastEnteredFromTop || isAnimating || e.deltaY <= 0) return;
 
-function hideSlide(i) {
-  gsap.to(groupList[i], {
-    y: '100%',
-    opacity: 0,
-    duration: 0.4,
-    ease: 'power2.in'
-  });
-}
+  e.preventDefault(); // 기본 스크롤 막기
+  disableScroll();    // 전체 고정
 
-function nextSlide() {
-  if (currentIndex >= groupList.length - 1) {
-    document.body.style.overflow = ''; // 마지막이면 스크롤 다시 허용
+  if (!hasFirstScrollSkipped) {
+    hasFirstScrollSkipped = true;
+    enableScroll();
     return;
   }
 
-  const prev = currentIndex;
-  currentIndex++;
+  if (index >= groupList.length) {
+    enableScroll();
+    return;
+  }
 
-  hideSlide(prev);
-  showSlide(currentIndex);
+  isAnimating = true;
 
-  setTimeout(() => {
-    nextSlide();
-  }, 2000);
-}
-
-
-  // ✅ 휠 이벤트에 따라 con 전환
-  $(window).on('wheel', function (e) {
-    if (!started || scrollUnlocked || isAnimating) return;
-    if (e.originalEvent.deltaY <= 0) return;
-
-    isAnimating = true;
-
-    if (atLastGroup) {
-      $('body').css('overflow', 'auto');
-      scrollUnlocked = true;
-      isAnimating = false;
-      return;
-    }
-
-    hide(index);
-    index++;
-
-    if (index < groupList.length) {
-      show(index);
-      if (index === groupList.length - 1) {
-        atLastGroup = true;
-      }
-    }
-
-    setTimeout(() => isAnimating = false, 700);
+  gsap.to(groupList[index - 1], {
+    y: "100%",
+    opacity: 0,
+    duration: 0.5,
+    ease: "power2.in"
   });
+
+  gsap.to(groupList[index], {
+    y: "0%",
+    opacity: 1,
+    duration: 0.6,
+    ease: "power2.out",
+    onComplete: () => {
+      index++;
+      isAnimating = false;
+      enableScroll();
+    }
+  });
+}, { passive: false });
+
 
 
 
@@ -241,5 +267,30 @@ function nextSlide() {
 
 });
 
+/* sns 배경변경  */
 
+document.addEventListener("DOMContentLoaded", function () {
+  // ✅ 이미지 미리 로딩 (배경, 전면 이미지)
+  const preloadBg = new Image();
+  preloadBg.src = '../img/sns/bgbg_2.svg';
 
+  const preloadFront = new Image();
+  preloadFront.src = '../img/sns/hoverfonrt.svg';
+
+  // ✅ 요소 선택
+  const phone = document.querySelector(".sns_enter .contents .phone");
+  const contents = document.querySelector(".sns_enter .contents");
+  const frontHover = document.querySelector(".sns_enter .fronthover");
+
+  // ✅ 마우스 진입 시 효과
+  phone.addEventListener("mouseenter", function () {
+    contents.classList.add("hovered-bg");
+    frontHover.classList.add("show");
+  });
+
+  // ✅ 마우스 나갈 시 원상복구
+  phone.addEventListener("mouseleave", function () {
+    contents.classList.remove("hovered-bg");
+    frontHover.classList.remove("show");
+  });
+});

@@ -71,8 +71,23 @@
   position: absolute;
   opacity: 0;
   z-index: 2;
+  
 } 
+.f_light.shine {
+  animation: glow 1.2s infinite ease-in-out alternate; /* ⏱ 더 빠르게 */
+  filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 3px #fff);
+}
 
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 2px #fff);
+    opacity: 0.85;
+  }
+  100% {
+    filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 27px #fff);
+    opacity: 1;
+  }
+}
 
 
 /* 전체 내용 시작  */
@@ -325,25 +340,44 @@ margin-top: 70px;
 
 
 
-.main_visual .main_content .main_mid>a .profile .p4 {
-
+.main_visual .main_content .main_mid > a .profile .p4 {
   font-size: 42px;
   line-height: 50px;
   font-family: 'Against', sans-serif;
   font-weight: normal;
-  color: #966846;
+  color: #966846; /* ✨ 진한 금색 */
+  position: relative;
+  z-index: 1;
+  animation: goldAndGlow 1.4s infinite ease-in-out alternate;
+ 
+}
+@keyframes goldAndGlow {
+  0% {
+    color:#966846; /* 기본 금색 */
+ 
+  }
+
+  100% {
+    color: #d59b28; /* 더 밝은 금색으로 번쩍 */
+    text-shadow:
+      0 0 0.5px #ba68ff,
+      0 0 2px #e5b3ff;
+    filter: brightness(1); /* ✨ 살짝 더 반짝 */
+  }
 }
 
-.main_visual .main_content .main_mid>a .profile .next {
+
+.main_visual .main_content .main_mid > a .profile .next {
   background-image: url(../img/profile_main/next_profile.png);
   background-repeat: no-repeat;
   background-position: center;
   width: 82px;
   height: 48px;
   padding-top: 10px;
- box-sizing: border-box;
-}
+  box-sizing: border-box;
+  
 
+}
 
 
 .main_visual .main_content .main_mid .profile:hover .p4 {
