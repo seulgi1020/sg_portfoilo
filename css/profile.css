@@ -3,12 +3,13 @@ body{width: 100%;
     height: 100%;
   background-color:#C08E54;
   overflow-x: hidden; /* 전체 페이지에서 가로 스크롤 방지 */
+  position: relative;
 }
 
 
 .headart {display: flex;
     width: 100%;
-height:825px;
+height:840px;
 position: relative;
 align-items: center;
 justify-content: center;
@@ -130,7 +131,7 @@ transform: translateY(40px);
 .headart .mark{
        position: absolute;  
          width: 272px;
-    height: 369px;
+    height: 380px;
               background-image: url(../img/profile_other/mark.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -156,11 +157,33 @@ transform: translateY(40px);
 }
 
 
-.scroll-container {
-  position: relative;
 
-   height: auto;
-}
+        .scroll-container {
+          left: 0;
+    top: 815px;
+            position: absolute;
+            height: 7000px;
+        }
+
+        /* 스크롤 길이 충분히! */
+        svg {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+
+        .bike_s {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 49px;
+            z-index: 1;
+            pointer-events: none;
+       
+        }
+
+
 
 .gg-container, .sg-container {
   position: relative;
@@ -185,7 +208,8 @@ transform: translateY(40px);
 
 .gg-container{
   position:absolute;
-  top: 900px;
+  top: 960px;
+  left: 0;
 align-self: center;
   z-index: 5;
   width: 1920px;
@@ -312,8 +336,11 @@ align-items: flex-end;
   background-position: center;
      z-index: 1;
    left: 0;
-  transform: translateY(-45px);
-  z-index: 2;
+  transform: translateY(-105px);
+  z-index: 3;
+         opacity: 0;
+      animation: fadeUp 0.6s ease-out forwards;
+      animation-delay: 0.13s;
 
 
 }
@@ -326,7 +353,7 @@ align-items: flex-end;
     height: 5205px;
     align-items: center;
 justify-content: space-between;
-z-index: 3;
+z-index: 10;
 }
 
 .historyall>ul.sg-container>li>div .dot{
@@ -1339,18 +1366,18 @@ bottom: 0;
 }
 
 /* 애니메이션 클래스 */
-.avaliable.active .im_1 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.05s; }
-.avaliable.active .im_2 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.1s; }
-.avaliable.active .im_3 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.15s; }
-.avaliable.active .im_4 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.2s; }
-.avaliable.active .im_5 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.25s; }
-.avaliable.active .im_6 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.3s; }
-.avaliable.active .im_7 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.35s; }
-.avaliable.active .im_8 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.4s; }
-.avaliable.active .im_9 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.45s; }
-.avaliable.active .im_10 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.5s; }
-.avaliable.active .im_11 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.55s; }
-.avaliable.active .im_12 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.6s; }
+.avaliable.active .im_1 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.1s; }
+.avaliable.active .im_2 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.2s; }
+.avaliable.active .im_3 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.3s; }
+.avaliable.active .im_4 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.4s; }
+.avaliable.active .im_5 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.5s; }
+.avaliable.active .im_6 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.6s; }
+.avaliable.active .im_7 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.7s; }
+.avaliable.active .im_8 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.8s; }
+.avaliable.active .im_9 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.9s; }
+.avaliable.active .im_10 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.10s; }
+.avaliable.active .im_11 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.11s; }
+.avaliable.active .im_12 { animation: fadeUp 0.3s ease-out forwards; animation-delay: 0.12s; }
 
 .avaliable.active .others { animation: fadeUp 0.6s ease-out forwards; animation-delay: 1.0s; }
 .avaliable.active .plus { animation: fadeUp 1.0s ease-out forwards; animation-delay: 1.8s; }
@@ -1382,6 +1409,7 @@ padding-top: 200px;
   justify-content: center;
 
   position: relative;
+  padding-bottom: 200px;
   
 
 
@@ -1671,11 +1699,49 @@ top: 260px;
 
 
 
+ footer{
+  z-index: 20;
+display: flex;
+width: 100%;
+height: 204px;
+background-color: #B18048;
+align-items: center;
+justify-content: center;
+overflow-y: hidden;
+
+}
+
+footer .backto{
+  width: 1920px;
+  height: 90px;
+background-color: #9C6F3B;
+display: flex;
+position: relative;
+align-items: center;
+justify-content: center;
+}
 
 
+footer .backto .all {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 가운데 정렬 */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .backto .all a p{
+
+font-family: 'CaviarDreams', sans-serif; 
+font-size: 40px;
+line-height: 40;
+font-weight: 400;
+color: #fff;
 
 
-
+}
 
 
 

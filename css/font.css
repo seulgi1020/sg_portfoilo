@@ -4,7 +4,10 @@
 /* font-family: 'CaviarDreams', sans-serif; 
  font-family: 'Against', sans-serif; 
    font-family: 'Henotica', serif;
-   font-family: 'Classy Vogue', serif; */
+   font-family: 'Classy Vogue', serif; 
+     font-family: 'Cafe24Danjunghae', sans-serif;
+     font-family: 'YUniverse', sans-serif;
+*/
 
    @font-face {
     font-family: 'CaviarDreams';
@@ -90,4 +93,18 @@
   font-style: normal;
   font-weight: 700;
   src: local('KOROAD'), url('./fonts/KOROAD_BOLD.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Cafe24Danjunghae';
+  src: url('./font/Cafe24Danjunghae-v2.0.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YUniverse';
+  src: url('./font/YUniverse-L.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }

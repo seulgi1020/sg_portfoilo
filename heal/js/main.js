@@ -37,72 +37,178 @@ $(function () {
 });
 
 
-
-let previousIcon = null; // 이전에 클릭한 아이콘을 저장할 변수
-
-document.querySelectorAll(".icon-img").forEach((img) => {
-  // 마우스를 올렸을 때 이미지 변경
-  img.addEventListener("mouseover", function () {
-    this.src = this.getAttribute("data-on"); // data-on 이미지로 변경
-  });
-
-  // 마우스를 떼었을 때 이미지 원래대로 복구
-  img.addEventListener("mouseout", function () {
-    if (this !== previousIcon) {
-      this.src = this.getAttribute("data-off"); // data-off 이미지로 원래 복구
-    }
-  });
-
-  // 클릭했을 때 이미지 원래 상태로 되돌리기
-  img.addEventListener("click", function () {
-    // 이전에 클릭한 아이콘이 있다면 그 아이콘을 원래 상태로 돌려놓기
-    if (previousIcon && previousIcon !== this) {
-      previousIcon.src = previousIcon.getAttribute("data-off"); // 이전 아이콘 원래 이미지로 복구
-    }
-
-    // 현재 클릭한 아이콘을 기억
-    previousIcon = this;
-
-    // 현재 클릭한 아이콘을 "선택된" 상태로 유지
-    this.src = this.getAttribute("data-on"); // 현재 클릭한 아이콘을 on 이미지로 변경
-  });
-});
   
     
 
-document.querySelectorAll(".icon-item").forEach((icon) => {
-  icon.addEventListener("click", function () {
-    let targetId = this.getAttribute("data-target"); // 클릭한 아이콘의 data-target 가져오기
-    let allContents = document.querySelectorAll(".content-text"); // 모든 content-text 요소
-    let allBackgrounds = document.querySelectorAll(".background"); // 모든 background 요소
-    let allIcons = document.querySelectorAll(".icon-img"); // 모든 아이콘 이미지
-    let iconImg = this.querySelector(".icon-img"); // 클릭한 아이콘의 이미지
 
-    // 모든 콘텐츠 숨기기
-    allContents.forEach((content) => content.classList.remove("active"));
-    allBackgrounds.forEach((bg) => bg.style.backgroundImage = "none");
+/* 원형뉴스스와이퍼 */
+  const swiperElement = document.getElementById('swiperTrack');
+  const infoBox = document.getElementById('infoBox');
+  const contents = [...swiperElement.querySelectorAll('.circle-content')].map(el => ({
+    title: el.querySelector('.custom-title')?.innerHTML || '',
+    desc: el.querySelector('.custom-desc')?.innerHTML || '',
+    image: el.dataset.image
+  }));
 
-    // 모든 아이콘 기본 이미지로 변경
-    allIcons.forEach((img) => {
-      img.src = img.getAttribute("data-off");
+  const centerX = 920;
+  const centerY = 460;
+  const radiusX = 650;
+  const radiusY = 180;
+  let currentIndex = 0;
+
+  function createCircles() {
+    contents.forEach((item, i) => {
+      const el = document.createElement('div');
+      el.classList.add('circle');
+      el.dataset.index = i;
+      el.innerHTML = `<img src="${item.image}" alt="">`;
+      el.addEventListener('click', () => activateCircle(i));
+      swiperElement.appendChild(el);
+    });
+    updatePositions();
+  }
+
+  function updatePositions() {
+    const circles = document.querySelectorAll('.circle');
+    const total = contents.length;
+    const visibleRange = 2; // 비활성화 2개 + 활성화 1개 + 비활성화 2개 = 총 5개만 보이기
+
+    circles.forEach((circle, i) => {
+      const offset = (i - currentIndex + total) % total;
+      const displayIndex = offset > total / 2 ? offset - total : offset;
+
+      if (Math.abs(displayIndex) <= visibleRange) {
+        const angle = displayIndex * (Math.PI / 12); // 1/4 원형 정도로 조절
+        const x = centerX + radiusX * Math.cos(angle - Math.PI / 2);
+        const y = centerY + radiusY * Math.sin(angle - Math.PI / 2);
+        circle.style.left = `${x}px`;
+        circle.style.top = `${y}px`;
+        circle.style.opacity = 1;
+        circle.style.pointerEvents = 'auto';
+      } else {
+        circle.style.left = `-9999px`;
+        circle.style.top = `-9999px`;
+        circle.style.opacity = 0;
+        circle.style.pointerEvents = 'none';
+      }
+
+      circle.classList.remove('active');
+      if (i === currentIndex) circle.classList.add('active');
     });
 
-    let targetContent = document.getElementById(targetId); // 해당 콘텐츠 찾기
+    infoBox.innerHTML = `
+      <div class="info-item">
+        <h3>${contents[currentIndex].title}</h3>
+        <p>${contents[currentIndex].desc}</p>
+      </div>
+    `;
+    infoBox.classList.add('active');
+  }
 
-    if (targetContent) {
-      targetContent.classList.add("active"); // 클릭한 콘텐츠 활성화
-      let bg = targetContent.querySelector(".background"); // 해당 콘텐츠 안의 background 찾기
+  function activateCircle(index) {
+    currentIndex = index;
+    updatePositions();
+  }
 
-      let index = targetId.replace("content", ""); // content 숫자 추출 (content1 -> 1)
-      bg.style.backgroundImage = `url('../img/healthcarepart/bg/health_conner_bg_${index}.png')`; // 해당하는 배경 이미지 적용
+  function move(dir) {
+    currentIndex = (currentIndex + dir + contents.length) % contents.length;
+    updatePositions();
+  }
 
-      // 클릭한 아이콘의 이미지 변경
-      iconImg.src = iconImg.getAttribute("data-on");
-    }
+  createCircles();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 푸터 로고 올라갔다 내려오기  */
+
+  gsap.timeline({ repeat: -1, repeatDelay: 3 }) // 무한 반복 + 3초 대기
+    .to(".heart", { y: -50, duration: 0.3 })
+    .to(".heart", { y: 0, duration: 0.3 })
+    .to(".pH", { y: -50, duration: 0.3 })
+    .to(".pH", { y: 0, duration: 0.3 })
+    .to(".pE", { y: -50, duration: 0.3 })
+    .to(".pE", { y: 0, duration: 0.3 })
+    .to(".pA", { y: -50, duration: 0.3 })
+    .to(".pA", { y: 0, duration: 0.3 })
+    .to(".pL", { y: -50, duration: 0.3 })
+    .to(".pL", { y: 0, duration: 0.3 });
+
+
+
+
+const track = document.querySelector(".image-track");
+
+if (track) {
+  const images = track.querySelectorAll("img");
+  const imageWidth = 277 + 30; // 이미지 + 간격
+  const totalImages = images.length;
+
+  // ✅ 이미지들을 클론해서 track 뒤에 복사
+  images.forEach((img) => {
+    const clone = img.cloneNode(true);
+    track.appendChild(clone);
   });
-});
+
+  const totalSlides = totalImages * 2; // 원본 + 복제된 이미지 수
+  let currentIndex = 0;
+
+  function slideImages() {
+    const distance = -imageWidth * currentIndex;
+
+    gsap.to(track, {
+      x: distance,
+      duration: 0.8,
+      ease: "power1.inOut",
+      onComplete: () => {
+        currentIndex++;
+
+        if (currentIndex >= totalImages) {
+          // 복제 이미지 마지막 직전에 도달했을 경우 → 순간 리셋
+          currentIndex = 0;
+          gsap.set(track, { x: 0 }); // 순식간에 원위치
+        }
+
+        setTimeout(slideImages, 700); // 다음 슬라이드 타이밍
+      }
+    });
+  }
+
+  slideImages();
+}
 
   });
+
 
 
 
