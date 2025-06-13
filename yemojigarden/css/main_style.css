@@ -209,7 +209,7 @@ ul.fixed_right>li>a .outdoor{background-image:
     justify-content: center;
 }
 
-ul.fixed_right>li>a .tlaktlak{background-image: 
+ul.fixed_right>li .tlaktlak{background-image: 
     url(../img/background_main/conusl_flower.svg);
     width: 92px;
     height: 92px;
@@ -217,6 +217,7 @@ ul.fixed_right>li>a .tlaktlak{background-image:
     background-position: center;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 
