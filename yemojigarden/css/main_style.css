@@ -217,6 +217,7 @@ ul.fixed_right>li .tlaktlak{background-image:
     background-position: center;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 
@@ -1298,7 +1299,7 @@ background-position: center;}
     overflow-x: hidden;
     box-sizing: border-box;
 
-    max-width: 100vw;
+    max-width: 100%;
   }
 
   
@@ -2536,8 +2537,6 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-
-
     background-image: url(../footer-01.svg);
     background-repeat: no-repeat;
     background-position: bottom center;
