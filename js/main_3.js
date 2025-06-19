@@ -3,12 +3,6 @@ $(function () {
 /* 프로필 라인 */
 
 
-
-
-
-
-
-
 // 자전거 path 따라 스크롤 애니메이션
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
@@ -41,7 +35,7 @@ gsap.to(bike, {
   motionPath: {
     path: path,
     align: path,
-    autoRotate: true,
+   // autoRotate: true,
     alignOrigin: [0.5, 0.5],
     start: 0,
     end: 1,
@@ -79,27 +73,36 @@ requestAnimationFrame(() => {
 
 
 // 프로그램 항목 순차 등장 애니메이션
-// 이 코드는 main_2.js에 추가해줘
-function isInViewport(el) {
-  const rect = el.getBoundingClientRect();
-  return (
-    rect.top < window.innerHeight && rect.bottom > 0
-  );
+
+let lastScrollTop = 0;
+
+function isSectionInViewport(section) {
+  const rect = section.getBoundingClientRect();
+  return rect.top < window.innerHeight && rect.bottom > 0;
 }
 
 function handleScroll() {
   const section = document.querySelector(".avaliable");
+  const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  const isScrollingDown = currentScroll > lastScrollTop;
+  lastScrollTop = currentScroll;
+
   if (!section) return;
 
-  if (isInViewport(section)) {
+  // 👇 아래 방향 & 화면 안에 완전히 들어왔을 때만 발동
+  if (isScrollingDown && isSectionInViewport(section)) {
     section.classList.add("active");
-  } else {
-    section.classList.remove("active"); // 다시 올라가면 제거 (반복)
+
+    // 다시 올라가면 반복 재생 위해 제거
+    setTimeout(() => {
+      section.classList.remove("active");
+    }, 4000); // 4초 후 다시 준비
   }
 }
 
 window.addEventListener("scroll", handleScroll);
 window.addEventListener("load", handleScroll);
+
 
 
 

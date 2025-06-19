@@ -7,7 +7,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden; /* ✅ 가로 스크롤 강제 제거 */
     overscroll-behavior: none; 
   }
@@ -209,7 +209,7 @@ ul.fixed_right>li>a .outdoor{background-image:
     justify-content: center;
 }
 
-ul.fixed_right>li>a .tlaktlak{background-image: 
+ul.fixed_right>li .tlaktlak{background-image: 
     url(../img/background_main/conusl_flower.svg);
     width: 92px;
     height: 92px;
@@ -1271,7 +1271,7 @@ background-position: center;}
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transform: translateY(-264px);
+    transform: translateY(-160px);
     z-index: 3;
     overflow: hidden;
   }
@@ -2541,7 +2541,7 @@ footer {
     background-image: url(../footer-01.svg);
     background-repeat: no-repeat;
     background-position: bottom center;
-    background-size: 1920px 480px;
+    background-size: 100% 480px;
     z-index: 1;
     position: relative;
 

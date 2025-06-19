@@ -486,48 +486,21 @@ section.mid_short_show .con {
 }
 
 section.mid_short_show .con .img {
-  width: 495px;
-  height: 666px;
-  background-image: url(../img/section_show/mark_show.png);
+  width: 920px;
+  height: 617px;
+  background-image: url(../img/section_show/portfolio_ready.png);
   background-position: center;
   background-repeat: no-repeat;
   position: absolute;
   align-self: center;
   z-index: 1;
+transform: translateY(-40px);
 
 }
 
-section.mid_short_show .con>ul {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  transform: translateX(100px);
-  margin-top: 180px;
-  width: 100px;
-  height: 100px;
-  z-index: 2;
 
-}
 
-section.mid_short_show .con>ul .txt1 {
-  font-size: 124px;
-  font-family: 'Wistania', cursive;
-  font-weight: normal;
-  line-height: 80px;
-  color: #B26F3E;
-  white-space: nowrap;
-}
 
-section.mid_short_show .con>ul .txt2 {
-  font-size: 124px;
-  font-family: 'Wistania', cursive;
-  font-weight: normal;
-  line-height: 80px;
-  color: #B26F3E;
-  white-space: nowrap;
-  transform: translateX(40px);
-  margin-top: -10px;
-}
 
 .bangbb {
   position: relative;

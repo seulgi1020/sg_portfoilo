@@ -134,7 +134,7 @@ function initSlides() {
 // ✅ ScrollTrigger 설정
 ScrollTrigger.create({
   trigger: ".e_container",
-  start: "top+=100 center", // .e_container의 top에서 100px 아래 지점이 center에 도달할 때
+  start: "top+=340 center", // .e_container의 top에서 100px 아래 지점이 center에 도달할 때
   end: "bottom top",
 
   onEnter: (self) => {
