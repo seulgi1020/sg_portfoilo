@@ -455,25 +455,28 @@ font-weight: normal;
 
 
 .stiky_all {
-  position: relative;
+  width: 100%;
+  height: 4000px;
+  height: 100vh; 
   overflow: hidden;
   /* 필요 시 추가 */
 }
 
-section.mid_short_show {
+.stiky_all section.mid_short_show {
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   background-color: #381738;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  opacity: 0;
+
+  z-index: 10;
+   pointer-events: none; 
+
 }
+
 
 
 section.mid_short_show .con {
@@ -523,19 +526,21 @@ section.mid_short_show .con .bangbb .ligt {
 }
 
 
-section.pofo_list {
+.stiky_all section.pofo_list {
   width: 100%;
-  height: 4200px;
+ height: 4000px;
   background-color: #fff;
   /* background: red; */
   display: flex;
   align-items: center;
+  top: 0;
+  left: 0;
   justify-content: center;
-  position: relative;
-  top: 100vh;
-  /* mid_short_show 아래에서 시작 */
-  opacity: 0;
-  z-index: 3;
+ position: relative;
+ 
+    cursor: url('/img/section_portfoliolist/cursor_point.png') 64 86, auto;
+  z-index: 1;
+  margin-top: 100vh;
 }
 
 
