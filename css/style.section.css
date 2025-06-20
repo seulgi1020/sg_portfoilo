@@ -679,13 +679,64 @@ section.pofo_list ul.list>li>a .toge:hover .img {
   right: 0;
   bottom: 0;
   border-left: 6px solid #C88F65;
-  background-color: #cacaca;
+background-size: cover;
 
-  background-image: none;  
+
   transition: all 0.4s ease;
 
 
 }
+
+
+section.pofo_list ul.list .pf_1 a .toge:hover .img {
+
+ background-image: url(../img/section_portfoliolist/2_heal.png); 
+  transition: all 0.4s ease;
+  
+
+}
+
+section.pofo_list ul.list .pf_2 a .toge:hover .img {
+
+ background-image: url(../img/section_portfoliolist/1_여미지.jpg); 
+  transition: all 0.4s ease;
+
+}
+
+
+section.pofo_list ul.list .pf_3 a .toge:hover .img {
+
+ background-image: url(../img/section_portfoliolist/4_sadina.png); 
+  transition: all 0.4s ease;
+
+}
+
+
+section.pofo_list ul.list .pf_4 a .toge:hover .img {
+
+ background-image: url(../img/section_portfoliolist/3_voca.png); 
+  transition: all 0.4s ease;
+
+}
+
+section.pofo_list ul.list .pf_5 a .toge:hover .img {
+
+ background-image: url(../img/section_portfoliolist/5_gggle.png); 
+  transition: all 0.4s ease;
+
+}
+
+section.pofo_list ul.list .pf_6 a .toge:hover .img {
+
+ background-image: url(../img/section_portfoliolist/6_baseball.png); 
+  transition: all 0.4s ease;
+
+}
+
+
+
+
+
 
 
 
@@ -771,8 +822,8 @@ section.pofo_list ul.list>li>a .toge:hover .img {
 
 .pf_5 .img {
 
-  background-size: 320px 308px;
-  background-image: url(../img/section_portfoliolist/wapapp.png);
+  background-size: 251px 252px;
+  background-image: url(../img/section_portfoliolist/ggoolg.png);
   /* 공통 */
   width: 496px;
   height: 320px;
@@ -789,8 +840,8 @@ section.pofo_list ul.list>li>a .toge:hover .img {
 
 .pf_6 .img {
 
-  background-size: 345px 216px;
-  background-image: url(../img/section_portfoliolist/visualdesign.png);
+  background-size: 423px 282px;
+  background-image: url(../img/section_portfoliolist/base.png);
   /* 공통 */
   width: 496px;
   height: 320px;
