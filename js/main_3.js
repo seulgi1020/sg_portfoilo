@@ -75,6 +75,7 @@ requestAnimationFrame(() => {
 // 프로그램 항목 순차 등장 애니메이션
 
 let lastScrollTop = 0;
+let hasActivated = false; // ✅ 상태 추적 변수
 
 function isSectionInViewport(section) {
   const rect = section.getBoundingClientRect();
@@ -89,14 +90,16 @@ function handleScroll() {
 
   if (!section) return;
 
-  // 👇 아래 방향 & 화면 안에 완전히 들어왔을 때만 발동
-  if (isScrollingDown && isSectionInViewport(section)) {
+  // 👇 아래로 스크롤 중 & 화면에 진입했으며, 아직 활성화되지 않은 경우
+  if (isScrollingDown && isSectionInViewport(section) && !hasActivated) {
     section.classList.add("active");
+    hasActivated = true;
 
-    // 다시 올라가면 반복 재생 위해 제거
+    // ✅ 4초 뒤에 다시 초기화 (스크롤 위로 갔다 내려오면 재실행 가능)
     setTimeout(() => {
       section.classList.remove("active");
-    }, 4000); // 4초 후 다시 준비
+      hasActivated = false;
+    }, 4000);
   }
 }
 
